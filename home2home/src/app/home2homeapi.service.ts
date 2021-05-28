@@ -28,19 +28,24 @@ export class Home2HomeApiService {
     .map(response => response.json());
   }
 
- getBookingInfo(index: string) {
+  getBookingInfo(index: string) {
      return this.http.get('http://localhost:8080/app/bookings/' + index)
      .map(response => response.json());
-   }
+  }
 
- getBookingsIndex() {
-     return this.http.get('http://localhost:8080/app/bookings/')
-     .map(response => response.json());
- }
+  getBookingsIndex() {
+    return this.http.get('http://localhost:8080/app/bookings/')
+    .map(response => response.json());
+  }
 
- getPropertySearchResults(location: string, guests: string) {
-   return this.http.get('http://localhost:8080/app/searchForHomes/' + location + "-" + guests)
-   .map(response => response.json());
- }
+  getPropertySearchResults(location: string, guests: string) {
+    return this.http.get('http://localhost:8080/app/searchForHomes/' + location + "-" + guests)
+    .map(response => response.json());
+  }
+
+  getReviews(index: string) {
+    return this.http.get('http://localhost:8080/app/reviewsByProperty/' + index)
+    .map(response => response.json());
+  }
 
 }

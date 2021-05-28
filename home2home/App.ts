@@ -80,7 +80,7 @@ class App {
         var checkin = req.params.checkin;
         var checkout = req.params.checkout;
         var guests = req.params.guests;
-        this.Properties.searchProperties(res, { 'bedrooms': guests })
+        this.Properties.searchProperties(res, { 'bedrooms': guests, 'city': location })
     });
 
     router.get('/app/users/', (req, res) => {
@@ -141,6 +141,12 @@ class App {
           var id = req.params.reviewId;
           console.log('Query single review with id: ' + id);
           this.Reviews.retrieveReviewDetails(res, { reviewId: id });
+      });
+
+      router.get('/app/reviewsByProperty/:propertyId', (req, res) => {
+        var id = req.params.propertyId; 
+        console.log('Query reviews by property id: ' + id);
+        this.Reviews.retrieveReviewByProperty(res, { propertyId: id });
       });
 
       router.post('/app/reviews/', (req, res) => {

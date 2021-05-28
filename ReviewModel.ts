@@ -20,9 +20,9 @@ class ReviewModel {
             {
                 reviewId: Number,
                 reviewerId: Number,
-                propertyId: String,
+                propertyId: Number,
                 comment: String,
-                ratting: Number
+                rating: Number
             }, {collection: 'reviews'}
         );
     }
@@ -41,6 +41,13 @@ class ReviewModel {
     public retrieveReviewDetails(response:any, filter:Object) {
         var query = this.model.findOne(filter);
         query.exec( (err, itemArray) => {
+            response.json(itemArray);
+        });
+    }
+
+    public retrieveReviewByProperty(response:any, filter:Object): any  {
+        var query = this.model.find(filter);
+        query.exec((err, itemArray) => {
             response.json(itemArray);
         });
     }

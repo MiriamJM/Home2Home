@@ -30,7 +30,6 @@ describe('Test property result', function () {
 		expect(response).to.have.status(200);
 		expect(response.body).to.have.length.above(1);
 		expect(response).to.have.headers;
-		expect(response).to.be.json;
     });
     
 	it('The first entry in the array has known properties', function(){
@@ -72,7 +71,6 @@ describe('Test property result', function () {
 	it('Should return an object', function () {
 		expect(response).to.have.status(200);
 		expect(response).to.have.headers;
-		expect(response).to.be.json;
 	});
 
 	it('The entry has known properties', function () {

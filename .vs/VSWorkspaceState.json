@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\createDB",
+    "\\home2home\\src\\app",
+    "\\home2home\\src\\app\\share",
+    "\\Mocha",
+    "\\Mocha\\test"
   ],
-  "SelectedNode": "\\start.toDoSample.cmd",
+  "SelectedNode": "\\pages",
   "PreviewInSolutionExplorer": false
 }

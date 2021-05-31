@@ -25,8 +25,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="angularDist">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="package error">
+      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622432931774</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="package error">
+      <created>1622437271746</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1622437271746</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +213,8 @@
     <MESSAGE value="deployment" />
     <MESSAGE value="dist route update" />
     <MESSAGE value="angularDist" />
-    <option name="LAST_COMMIT_MESSAGE" value="angularDist" />
+    <MESSAGE value="package error" />
+    <option name="LAST_COMMIT_MESSAGE" value="package error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621718345641">
@@ -233,10 +241,10 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="234" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1621720338536" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622432618050">
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622437273837">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622432618050" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622437273837" />
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1621726355176" />
     <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622428235072">
       <screen x="0" y="23" width="1440" height="829" />

@@ -3,7 +3,7 @@ import Mongoose = require("mongoose");
 class DataAccess {
     static mongooseInstance: any;
     static mongooseConnection: Mongoose.Connection;
-    static DB_CONNECTION_STRING: string = 'mongodb://dbAdmin:test@localhost:3000/propertySample?authSource=admin';
+    static DB_CONNECTION_STRING: string = 'mongodb+srv://H2HAdmin:Home2Home>@cluster0.scqxl.mongodb.net/propertySample?retryWrites=true&w=majority';
     
     constructor () {
         DataAccess.connect();

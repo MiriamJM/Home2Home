@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "This directory contains one express servers: * Server.js + App.js - Encapsulated Node/Express web server w/ Mongo Access",
   "main": "./AppServer.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MiriamJM/Home2Home.git"

@@ -21,5 +21,7 @@
     "morgan": "^1.10.0",
     "url": "^0.11.0"
   },
-  "start": "node AppServer.js"
+  "scripts": {
+    "start": "node AppServer.js"
+  },
 }

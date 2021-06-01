@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/MiriamJM/Home2Home.git"
   },
+  "scripts": {
+    "start": "node AppServer.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -21,7 +24,5 @@
     "morgan": "^1.10.0",
     "url": "^0.11.0"
   },
-  "scripts": {
-    "start": "node AppServer.js"
-  },
+  
 }

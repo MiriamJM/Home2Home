@@ -8,6 +8,7 @@
     "url": "git+https://github.com/MiriamJM/Home2Home.git"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node AppServer.js"
   },
   "author": "",

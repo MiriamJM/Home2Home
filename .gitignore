@@ -8,3 +8,11 @@
 
 # Local History for Visual Studio Code
 .history/
+
+createDB/
+curlCommands/
+dbCommands/
+e2e/
+node_modules/
+docs/
+db/

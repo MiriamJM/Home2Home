@@ -69,7 +69,8 @@ var App = /** @class */ (function () {
             var checkin = req.params.checkin;
             var checkout = req.params.checkout;
             var guests = req.params.guests;
-            _this.Properties.searchProperties(res, { 'bedrooms': guests });
+            _this.Properties.searchProperties(res, { 'bedrooms': guests, 'city': location });
+
         });
         router.get('/app/users/', function (req, res) {
             console.log('Query All users');
@@ -121,6 +122,11 @@ var App = /** @class */ (function () {
             var id = req.params.reviewId;
             console.log('Query single review with id: ' + id);
             _this.Reviews.retrieveReviewDetails(res, { reviewId: id });
+        });
+        router.get('/app/reviewsByProperty/:propertyId', function (req, res) {
+            var id = req.params.propertyId;
+            console.log('Query reviews by property id: ' + id);
+            _this.Reviews.retrieveReviewByProperty(res, { propertyId: id });
         });
         router.post('/app/reviews/', function (req, res) {
             console.log(req.body);

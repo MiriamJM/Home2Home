@@ -11,6 +11,7 @@ propertiesCollection.insert(
 		bathrooms: 3,
 		sqFeet: 3000,
 		address: "123 abc ave",
+		city: "Seattle",
 		averageRating: 5
 }
 )
@@ -18,11 +19,12 @@ propertiesCollection.insert(
 	{
 		propertyId: 123,
 		propertyName: "Jeffs House",
-		description: "Seattle House",
+		description: "Los Angeles House",
 		bedrooms: 2,
 		bathrooms: 5,
 		sqFeet: 2000,
 		address: "321 cbd ave",
+		city: "Los Angeles",
 		averageRating: 3
 }
 )
@@ -34,19 +36,19 @@ reviewsCollection.remove({})
 reviewsCollection.insert(
 	{
 		reviewId: 1,
-		reveiwerId: 111,
-		proeprtyId: 123,
+		reviewerId: 111,
+		propertyId: 123,
 		comment: "very nice",
-		ratting: 5,
+		rating: 5,
 	}
 )
 reviewsCollection.insert(
 	{
 		reviewId: 2,
-		reveiwerId: 222,
-		proeprtyId: 345,
+		reviewerId: 222,
+		propertyId: 345,
 		comment: "house",
-		ratting: 3,
+		rating: 3,
 	}
 )
 

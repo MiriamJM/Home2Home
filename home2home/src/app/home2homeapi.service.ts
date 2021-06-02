@@ -33,7 +33,7 @@ export class Home2HomeApiService {
   }
 
  getBookingInfo(index: string) {
-   return this.http.get('http://localhost:8080/app/bookings/' + index)
+   //return this.http.get('http://localhost:8080/app/bookings/' + index)
    return this.http.get('/app/bookings/' + index)
      .map(response => response.json());
    }

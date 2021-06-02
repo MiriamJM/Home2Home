@@ -14,6 +14,7 @@ var UserModel_1 = require("./UserModel");
 var BookingModel_1 = require("./BookingModel");
 var ReviewModel_1 = require("./ReviewModel");
 //import {DataAccess} from './DataAccess';
+//test
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
@@ -137,6 +138,8 @@ var App = /** @class */ (function () {
         this.expressApp.use('/json', express.static(__dirname + '/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));
         this.expressApp.use('/', express.static(__dirname + '/pages'));
+        this.expressApp.use('/', express.static(__dirname + '/angularDist'));
+        this.expressApp.use('/', express.static(__dirname + '/dist/home2home'));
     };
     return App;
 }());

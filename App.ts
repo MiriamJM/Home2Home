@@ -11,6 +11,8 @@ import { PropertyModel } from './PropertyModel';
 import { UserModel } from './UserModel';
 import { BookingModel } from './BookingModel';
 import { ReviewModel } from './ReviewModel';
+import GooglePassport from './GooglePassport';
+import * as passport from 'passport';
 //import {DataAccess} from './DataAccess';
 //test
 // Creates and configures an ExpressJS web server.
@@ -23,6 +25,7 @@ class App {
   public Bookings: BookingModel;
   public Reviews: ReviewModel;
   public idGenerator:number;
+  public googlePassportObj:GooglePassport;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -34,6 +37,7 @@ class App {
     this.Users = new UserModel();
     this.Bookings = new BookingModel();
     this.Reviews = new ReviewModel();
+    this.googlePassportObj = new GooglePassport();
   }
 
   // Configure Express middleware.
@@ -41,6 +45,15 @@ class App {
     this.expressApp.use(logger('dev'));
     this.expressApp.use(bodyParser.json());
     this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+    this.expressApp.use(passport.initialize());
+    this.expressApp.use(passport.session());
+  }
+
+
+  private validateAuth(req, res, next):void {
+    if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
+    console.log("user is not authenticated");
+    res.redirect('/');
   }
 
   // Configure API endpoints.
@@ -51,6 +64,21 @@ class App {
             //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
             next();
     });
+
+    router.get('/auth/google', 
+    passport.authenticate('google', {scope: ['profile']}));
+
+    router.get('/auth/google/callback', 
+    passport.authenticate('google', 
+        {failureRedirect: '/' }
+    ), 
+    (req, res) => {
+        console.log("successully authenticated user and returned to callback page");
+        console.log("redirecting to /#/properties");
+        res.redirect('/#/properties');
+    })
+
+
     router.get('/app/properties/', (req, res) => {
         console.log('Query All properties');
         this.Properties.retrieveAllProperties(res);

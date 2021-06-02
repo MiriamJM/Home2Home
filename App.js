@@ -70,7 +70,6 @@ var App = /** @class */ (function () {
             var checkout = req.params.checkout;
             var guests = req.params.guests;
             _this.Properties.searchProperties(res, { 'bedrooms': guests, 'city': location });
-
         });
         router.get('/app/users/', function (req, res) {
             console.log('Query All users');
@@ -143,7 +142,7 @@ var App = /** @class */ (function () {
         this.expressApp.use('/', router);
         this.expressApp.use('/json', express.static(__dirname + '/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));
-        this.expressApp.use('/', express.static(__dirname + '/pages'));
+        //this.expressApp.use('/', express.static(__dirname+'/pages'));
         this.expressApp.use('/', express.static(__dirname + '/angularDist'));
         this.expressApp.use('/', express.static(__dirname + '/dist/home2home'));
     };

@@ -25,31 +25,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="Creating property component">
+    <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="changed directory structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongooseDB/pages/home2home-profile-stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createDB/createPropertySampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/createDB/createPropertySampleData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/App.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/app.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/app.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/booking/booking.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/booking/booking.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/booking/booking.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/booking/booking.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/booking/booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/booking/booking.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/home2homeapi.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/home2homeapi.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/property/properties-table/properties-table.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/property/properties-table/properties-table.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/property/properties-table/properties-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/property/properties-table/properties-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/property/property.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/property/property.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/property/property.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/property/property.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/property/property.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/property/property.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/travelerProfile/travelerProfile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/travelerProfile/travelerProfile.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/travelerProfile/travelerProfile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/travelerProfile/travelerProfile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/app/travelerProfile/travelerProfile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/app/travelerProfile/travelerProfile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home2home/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home2home/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/IUserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IUserModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="EmilyUpdated" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,8 +60,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/home2home" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/home2home" />
       <recent name="$PROJECT_DIR$/home2home/src" />
       <recent name="$PROJECT_DIR$/angular" />
       <recent name="$PROJECT_DIR$/" />
@@ -151,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621742367705</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit files">
+      <created>1622239298456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622239298456</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changed directory structure">
+      <created>1622428369613</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622428369613</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,13 +165,27 @@
     <MESSAGE value="Routing is working!" />
     <MESSAGE value="Got component service to work, updated html" />
     <MESSAGE value="Creating property component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating property component" />
+    <MESSAGE value="commit files" />
+    <MESSAGE value="changed directory structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed directory structure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621718345641">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.830@0.23.1440.830" timestamp="1621718345641" />
+    <state x="117" y="123" width="1223" height="629" key="DiffContextDialog" timestamp="1622418758460">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="117" y="123" width="1223" height="629" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418758460" />
+    <state x="152" y="95" key="MergeDialog" timestamp="1622418679471">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="152" y="95" key="MergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418679471" />
+    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1622418810709">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418810709" />
     <state x="505" y="147" key="RollbackChangesDialog" timestamp="1621479286486">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
@@ -189,19 +194,23 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="234" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1621720338536" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1621726355176">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622428376812">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622428376812" />
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1621726355176" />
-    <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621806636719">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622428235072">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.829@0.23.1440.829" timestamp="1622428235072" />
     <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.830@0.23.1440.830" timestamp="1621726319321" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.833@0.23.1440.833" timestamp="1621804401594" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1621806636719" />
-    <state x="560" y="193" width="632" height="492" key="find.popup" timestamp="1621820111384">
-      <screen x="0" y="23" width="1440" height="832" />
+    <state x="560" y="192" width="735" height="491" key="find.popup" timestamp="1622425418940">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="647" y="152" width="735" height="534" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1622422993192" />
+    <state x="560" y="192" width="735" height="491" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1622425418940" />
     <state x="560" y="193" width="632" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1621725665904" />
     <state x="560" y="193" width="632" height="491" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1621731050042" />
     <state x="560" y="193" width="632" height="492" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1621820111384" />
@@ -213,6 +222,10 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="97" y="102" key="new project wizard/0.23.1440.830@0.23.1440.830" timestamp="1621557833109" />
+    <state x="393" y="199" key="run.anything.popup" timestamp="1622418616439">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="393" y="199" key="run.anything.popup/0.23.1440.829@0.23.1440.829" timestamp="1622418616439" />
     <state x="252" y="179" width="670" height="676" key="search.everywhere.popup" timestamp="1621814582785">
       <screen x="0" y="23" width="1440" height="832" />
     </state>

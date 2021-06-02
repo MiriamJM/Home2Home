@@ -9,4 +9,4 @@ const routes: Routes = [
   { path: 'booking/:booking_id', component: BookingComponent },
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes, {useHash:true});

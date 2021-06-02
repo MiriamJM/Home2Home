@@ -31,6 +31,12 @@ var PropertyModel = /** @class */ (function () {
             response.json(itemArray);
         });
     };
+    PropertyModel.prototype.searchProperties = function (response, filter) {
+        var query = this.model.find(filter);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
+    };
     PropertyModel.prototype.retrievePropertyDetails = function (response, filter) {
         var query = this.model.findOne(filter);
         query.exec(function (err, itemArray) {

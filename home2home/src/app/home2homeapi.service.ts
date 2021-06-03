@@ -9,8 +9,8 @@ export class Home2HomeApiService {
 
 
   getPropertiesIndex() {
-    //return this.http.get('http://localhost:8080/app/properties')
-     return this.http.get('/app/properties/')
+    return this.http.get('http://localhost:8080/app/properties')
+     //return this.http.get('/app/properties/')
     .map(response => response.json());
   }
 

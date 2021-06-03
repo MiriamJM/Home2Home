@@ -3,3 +3,5 @@ class googleOath2 {
     static secret:string = "25WHY8jYAJ5xicSffPyjgWeQ";
 }
 export default googleOath2;
+
+

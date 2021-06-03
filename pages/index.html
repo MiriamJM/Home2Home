@@ -19,21 +19,7 @@
 			  <div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 				  <li><a href="#">Home</a></li>
-				  <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">List<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-					  <li><a href="#">Create</a></li>
-					  <li><a href="javascript:initXHR('lists', null)">Active</a></li>
-					  <li><a href="#">Disabled</a></li>
-					</ul>
-				  </li>
-				  <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shared<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-					  <li><a href="#">Active</a></li>
-					  <li><a href="#">Pending</a></li>
-					</ul>
-				  </li>
+				  <li><a href="#">Profile</a></li>  
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 				  <li><a href="#">Login</a></li>
@@ -42,47 +28,28 @@
 			</div><!--/.container-fluid -->
 		  </nav>
 		  
-		<div id="home">
-		  <!-- Main component for a primary marketing message or call to action -->
-		  <div class="jumbotron">
-			<h1>To Do List</h1>
-			<p>Keep track of all of things you need to do by creating lists and sharing items with friends.</p>
-			<p>
-			  <a class="btn btn-lg btn-primary" href="javascript:initXHR('lists', null)" role="button">View</a>
-			</p>
-		  </div>
-		</div>
-		
-		<div id="lists" style="display:none;">
-		</div>
+		  <div id="home">
+		  	<!-- Main component for a primary marketing message or call to action -->
 
-		<div id="gList" style="display:none;">
-			<div class="panel panel-default">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading"> 
-				  <h3>List</h3>
-				  <div>
-					<a href="#"><span class="glyphicon glyphicon-edit"></span></a>
-					<a href="#"><span class="glyphicon glyphicon-trash"></span></a>
-					<a href="#"><span class="glyphicon glyphicon-ok"></span></a>
-				  </div>
-			  </div>
-				<!-- Table -->
-				<table class="table" style="font-size:10pt;">
-					<thead>
-						<tr>
-							<th>Items</th>
-							<th width="5%">Shared</th>
-							<th width="5%">Status</th>
-						</tr>
-					</thead>
-					<tbody id='tasks'>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		
-		</div> <!-- /container -->
+		  	<nav class="navbar navbar-expand-lg navbar-dark">
+		  		<div class="container-fluid">
+		  			<a class="navbar-brand" href="#">Home2Home</a>
+		  			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		  				<span class="navbar-toggler-icon"></span>
+		  			</button>
+		  			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  				<div class="navbar-nav">
+		  					<a class="nav-link active" [routerLink]="['/property/']">Home</a>
+		  					<a class="nav-link" aria-current="page" [routerLink]="['/travelerProfile/:id']">Profile</a>
+		  				</div>
+		  			</div>
+		  		</div>
+
+		  	</nav>
+
+		  	<router-outlet></router-outlet>
+
+		  </div> <!-- /container --> 
 	
     <!-- Bootstrap core JavaScript
     ================================================== -->

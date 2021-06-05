@@ -26,7 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="changed directory structure">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularDist/main.216ecd5270986720ea41.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularDist/polyfills.a68753f9b043aa249ba3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

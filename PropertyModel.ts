@@ -41,6 +41,13 @@ class PropertyModel {
         });
     }
 
+    public searchProperties(response:any, filter:Object): any {
+        var query = this.model.find(filter);
+        query.exec((err, itemArray) => {
+            response.json(itemArray);
+        });
+    }
+
     public retrievePropertyDetails(response:any, filter:Object) {
         var query = this.model.findOne(filter);
         query.exec( (err, itemArray) => {

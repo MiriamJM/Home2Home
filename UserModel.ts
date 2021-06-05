@@ -28,6 +28,7 @@ class UserModel {
                 locationPreferences: [String],
                 datePreferences: [Date],
                 properties: Number,
+                bookings: Number,
             }, {collection: 'users'}
         );
     }

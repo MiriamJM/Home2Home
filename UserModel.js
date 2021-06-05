@@ -20,7 +20,8 @@ var UserModel = /** @class */ (function () {
             phoneNumber: String,
             locationPreferences: [String],
             datePreferences: [Date],
-            properties: Number
+            properties: Number,
+            bookings: Number
         }, { collection: 'users' });
     };
     UserModel.prototype.createModel = function () {

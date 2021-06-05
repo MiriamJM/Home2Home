@@ -1,11 +1,11 @@
 import Mongoose = require("mongoose");
 
 interface IReviewModel extends Mongoose.Document {
-    reveiwId: number;
-    reveiwerId: number;
-    proeprtyId: number;
+    reviewId: number;
+    reviewerId: number;
+    propertyId: number;
     comment: string;
-    ratting: number;
+    rating: number;
 }
 
 export {IReviewModel};

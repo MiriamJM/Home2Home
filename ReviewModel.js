@@ -14,9 +14,9 @@ var ReviewModel = /** @class */ (function () {
         this.schema = new Mongoose.Schema({
             reviewId: Number,
             reviewerId: Number,
-            propertyId: String,
+            propertyId: Number,
             comment: String,
-            ratting: Number
+            rating: Number
         }, { collection: 'reviews' });
     };
     ReviewModel.prototype.createModel = function () {
@@ -30,6 +30,12 @@ var ReviewModel = /** @class */ (function () {
     };
     ReviewModel.prototype.retrieveReviewDetails = function (response, filter) {
         var query = this.model.findOne(filter);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
+    };
+    ReviewModel.prototype.retrieveReviewByProperty = function (response, filter) {
+        var query = this.model.find(filter);
         query.exec(function (err, itemArray) {
             response.json(itemArray);
         });

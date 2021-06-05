@@ -6,6 +6,8 @@ import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 //var MongoClient = require('mongodb').MongoClient;
 //var Q = require('q');
+import * as cookieParser from 'cookie-parser';
+import * as session from 'express-session';
 
 import { PropertyModel } from './PropertyModel';
 import { UserModel } from './UserModel';
@@ -45,6 +47,8 @@ class App {
     this.expressApp.use(logger('dev'));
     this.expressApp.use(bodyParser.json());
     this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+    this.expressApp.use(session({ secret:'25WHY8jYAJ5xicSffPyjgWeQ'}));
+    this.expressApp.use(cookieParser());
     this.expressApp.use(passport.initialize());
     this.expressApp.use(passport.session());
   }

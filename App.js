@@ -9,6 +9,8 @@ var logger = require("morgan");
 var bodyParser = require("body-parser");
 //var MongoClient = require('mongodb').MongoClient;
 //var Q = require('q');
+var cookieParser = require("cookie-parser");
+var session = require("express-session");
 var PropertyModel_1 = require("./PropertyModel");
 var UserModel_1 = require("./UserModel");
 var BookingModel_1 = require("./BookingModel");
@@ -36,6 +38,8 @@ var App = /** @class */ (function () {
         this.expressApp.use(logger('dev'));
         this.expressApp.use(bodyParser.json());
         this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+        this.expressApp.use(session({ secret: '25WHY8jYAJ5xicSffPyjgWeQ' }));
+        this.expressApp.use(cookieParser());
         this.expressApp.use(passport.initialize());
         this.expressApp.use(passport.session());
     };

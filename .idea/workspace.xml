@@ -26,8 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="changed directory structure">
-      <change afterPath="$PROJECT_DIR$/angularDist/main.216ecd5270986720ea41.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angularDist/polyfills.a68753f9b043aa249ba3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622428369613</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated repo">
+      <created>1622861871404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622861871404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,17 +174,19 @@
     <MESSAGE value="Creating property component" />
     <MESSAGE value="commit files" />
     <MESSAGE value="changed directory structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed directory structure" />
+    <MESSAGE value="updated repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated repo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621718345641">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.830@0.23.1440.830" timestamp="1621718345641" />
-    <state x="117" y="123" width="1223" height="629" key="DiffContextDialog" timestamp="1622418758460">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="117" y="123" width="1223" height="630" key="DiffContextDialog" timestamp="1622862354358">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="117" y="123" width="1223" height="629" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418758460" />
+    <state x="117" y="123" width="1223" height="630" key="DiffContextDialog/0.23.1440.830@0.23.1440.830" timestamp="1622862354358" />
     <state x="152" y="95" key="MergeDialog" timestamp="1622418679471">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -195,11 +203,11 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="234" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1621720338536" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622428376812">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622861880260">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622428376812" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1621726355176" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622861880260" />
     <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622428235072">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

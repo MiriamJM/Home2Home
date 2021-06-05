@@ -13,6 +13,8 @@ var PropertyModel_1 = require("./PropertyModel");
 var UserModel_1 = require("./UserModel");
 var BookingModel_1 = require("./BookingModel");
 var ReviewModel_1 = require("./ReviewModel");
+var GooglePassport_1 = require("./GooglePassport");
+var passport = require("passport");
 //import {DataAccess} from './DataAccess';
 //test
 // Creates and configures an ExpressJS web server.
@@ -27,12 +29,23 @@ var App = /** @class */ (function () {
         this.Users = new UserModel_1.UserModel();
         this.Bookings = new BookingModel_1.BookingModel();
         this.Reviews = new ReviewModel_1.ReviewModel();
+        this.googlePassportObj = new GooglePassport_1["default"]();
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
         this.expressApp.use(logger('dev'));
         this.expressApp.use(bodyParser.json());
         this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+        this.expressApp.use(passport.initialize());
+        this.expressApp.use(passport.session());
+    };
+    App.prototype.validateAuth = function (req, res, next) {
+        if (req.isAuthenticated()) {
+            console.log("user is authenticated");
+            return next();
+        }
+        console.log("user is not authenticated");
+        res.redirect('/');
     };
     // Configure API endpoints.
     App.prototype.routes = function () {
@@ -42,6 +55,12 @@ var App = /** @class */ (function () {
             res.header("Access-Control-Allow-Origin", "*");
             //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
             next();
+        });
+        router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
+        router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
+            console.log("successully authenticated user and returned to callback page");
+            console.log("redirecting to /#/properties");
+            res.redirect('/#/properties');
         });
         router.get('/app/properties/', function (req, res) {
             console.log('Query All properties');
@@ -143,8 +162,8 @@ var App = /** @class */ (function () {
         this.expressApp.use('/json', express.static(__dirname + '/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));
         //this.expressApp.use('/', express.static(__dirname+'/pages'));
+        //this.expressApp.use('/', express.static(__dirname + '/angularDist'));
         this.expressApp.use('/', express.static(__dirname + '/angularDist'));
-        this.expressApp.use('/', express.static(__dirname + '/dist/home2home'));
     };
     return App;
 }());

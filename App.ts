@@ -76,7 +76,7 @@ class App {
         console.log("successully authenticated user and returned to callback page");
         console.log("redirecting to /#/properties");
         res.redirect('/#/property');
-    })
+    });
 
 
     router.get('/app/properties/', (req, res) => {

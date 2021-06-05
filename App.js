@@ -60,7 +60,7 @@ var App = /** @class */ (function () {
         router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
             console.log("successully authenticated user and returned to callback page");
             console.log("redirecting to /#/properties");
-            res.redirect('/#/properties');
+            res.redirect('/#/property');
         });
         router.get('/app/properties/', function (req, res) {
             console.log('Query All properties');

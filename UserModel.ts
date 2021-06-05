@@ -70,5 +70,24 @@ class UserModel {
         });
     }
 
+    public registerGoogleCustomer(userid: String, displayName: String,  response: any): any{
+        console.log('userid:', userid);
+        this.model.findOne({ "id": userid }).exec((err, data) => {
+            if (data) {
+            	console.log(`api/user-registration: FAIL - ID already exists`);
+            	response.redirect('/');
+            }else{
+                var user = {
+                    id: userid,
+                    name: displayName,
+                }
+                this.model.create(user, (err, data) => {
+                    console.log('api/user-registration: SUCCESS');
+                    response.redirect('/');
+                });
+            }
+        })
+    }
+
 }
 export {UserModel};

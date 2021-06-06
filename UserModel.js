@@ -12,7 +12,7 @@ var UserModel = /** @class */ (function () {
     }
     UserModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            userId: Number,
+            userId: String,
             fName: String,
             lName: String,
             password: String,
@@ -60,15 +60,14 @@ var UserModel = /** @class */ (function () {
     UserModel.prototype.registerGoogleCustomer = function (userid, displayName, response) {
         var _this = this;
         console.log('userid:', userid);
-        var userIdNum = Number(userid);
-        this.model.findOne({ "userId": userIdNum }).exec(function (err, data) {
+        this.model.findOne({ "id": userid }).exec(function (err, data) {
             if (data) {
                 console.log("api/user-registration: FAIL - ID already exists");
                 response.redirect('/');
             }
             else {
                 var user = {
-                    userId: userIdNum,
+                    userId: userid,
                     fName: displayName
                 };
                 _this.model.create(user, function (err, data) {

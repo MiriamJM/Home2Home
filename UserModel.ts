@@ -19,7 +19,7 @@ class UserModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                userId: Number,
+                userId: String,
                 fName: String,
                 lName: String,
                 password: String,

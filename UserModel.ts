@@ -72,11 +72,11 @@ class UserModel {
 
     public registerGoogleCustomer(userid: String, displayName: String,  response: any): any{
         console.log('userid:', userid);
-        return this.model.findOne({userId: userid }).exec((err, data) => {
+        this.model.findOne({userId: userid }).exec((err, data) => {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
-            	//response.redirect('/');
-            	return true;
+            	response.redirect('/#/travelerProfile/' + userid);
+            	//return true;
             } else {
                 var user = {
                     userId: userid,
@@ -84,9 +84,9 @@ class UserModel {
                 }
                 this.model.create(user, (err, data) => {
                     console.log('api/user-registration: SUCCESS');
-                    //response.redirect('/');
+                    response.redirect('/#/property/');
                 });
-                return false;
+                //return false;
             }
         })
     }

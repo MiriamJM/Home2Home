@@ -27,7 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="80a81c0f-aa62-4ef3-b463-3ff7acbd0fc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,11 +231,11 @@
     <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.832@0.23.1440.832" timestamp="1623014166885" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.833@0.23.1440.833" timestamp="1621804401594" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1621806636719" />
-    <state x="560" y="193" width="632" height="492" key="find.popup" timestamp="1623014439669">
-      <screen x="0" y="23" width="1440" height="832" />
+    <state x="514" y="198" width="735" height="491" key="find.popup" timestamp="1623020645559">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="647" y="152" width="735" height="534" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1622422993192" />
-    <state x="629" y="108" width="735" height="491" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1622945008815" />
+    <state x="514" y="198" width="735" height="491" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1623020645559" />
     <state x="560" y="193" width="707" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1622945609892" />
     <state x="560" y="193" width="632" height="491" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1621731050042" />
     <state x="560" y="193" width="632" height="492" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1623014439669" />

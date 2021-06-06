@@ -84,7 +84,8 @@ class App {
     ), 
     (req, res) => {
         var user = JSON.parse(JSON.stringify(req.user));
-        if (this.Users.registerGoogleCustomer(user.id, user.displayName, res)) {
+        this.Users.registerGoogleCustomer(user.id, user.displayName, res);
+        /*if (this.Users.registerGoogleCustomer(user.id, user.displayName, res)) {
             res.redirect('/#/travelerProfile/' + user.id);
         }
         else {
@@ -93,7 +94,7 @@ class App {
         //TODO: if statement to determine redirect
         //res.redirect('/#/travelerProfile/' + user.id);
             res.redirect('/#/property/');
-        }
+        }*/
     });
 
     router.get('/getSession', (req, res) => {

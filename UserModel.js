@@ -60,11 +60,11 @@ var UserModel = /** @class */ (function () {
     UserModel.prototype.registerGoogleCustomer = function (userid, displayName, response) {
         var _this = this;
         console.log('userid:', userid);
-        return this.model.findOne({ userId: userid }).exec(function (err, data) {
+        this.model.findOne({ userId: userid }).exec(function (err, data) {
             if (data) {
                 console.log("api/user-registration: FAIL - ID already exists");
-                //response.redirect('/');
-                return true;
+                response.redirect('/#/travelerProfile/' + userid);
+                //return true;
             }
             else {
                 var user = {
@@ -73,9 +73,9 @@ var UserModel = /** @class */ (function () {
                 };
                 _this.model.create(user, function (err, data) {
                     console.log('api/user-registration: SUCCESS');
-                    //response.redirect('/');
+                    response.redirect('/#/property/');
                 });
-                return false;
+                //return false;
             }
         });
     };

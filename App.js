@@ -51,6 +51,11 @@ var App = /** @class */ (function () {
         console.log("user is not authenticated");
         res.redirect('/');
     };
+    App.prototype.validateAuthAPI = function (req, res, next) {
+        if (req.isAuthenticated())
+            return next();
+        res.send({});
+    };
     // Configure API endpoints.
     App.prototype.routes = function () {
         var _this = this;
@@ -70,6 +75,7 @@ var App = /** @class */ (function () {
         });
         router.get('/app/properties/', function (req, res) {
             console.log('Query All properties');
+            console.log('userid:' + req.user.id);
             _this.Properties.retrieveAllProperties(res);
         });
         router.get('/app/properties/:propertyId', function (req, res) {

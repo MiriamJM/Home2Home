@@ -13,7 +13,7 @@ import { PropertyModel } from './PropertyModel';
 import { UserModel } from './UserModel';
 import { BookingModel } from './BookingModel';
 import { ReviewModel } from './ReviewModel';
-import GooglePassport from './GooglePassport';
+import GooglePassportObj from './GooglePassport';
 import * as passport from 'passport';
 //import {DataAccess} from './DataAccess';
 //test
@@ -27,7 +27,7 @@ class App {
   public Bookings: BookingModel;
   public Reviews: ReviewModel;
   public idGenerator:number;
-  public googlePassportObj:GooglePassport;
+  public googlePassportObj:GooglePassportObj;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -39,7 +39,7 @@ class App {
     this.Users = new UserModel();
     this.Bookings = new BookingModel();
     this.Reviews = new ReviewModel();
-    this.googlePassportObj = new GooglePassport();
+    this.googlePassportObj = new GooglePassportObj();
 
   }
 
@@ -60,6 +60,11 @@ class App {
     console.log("user is not authenticated");
     res.redirect('/');
   }
+
+    private validateAuthAPI(req, res, next):void {
+        if (req.isAuthenticated()) return next();
+        res.send({});
+    }
 
   // Configure API endpoints.
   private routes(): void {
@@ -88,6 +93,7 @@ class App {
 
     router.get('/app/properties/', (req, res) => {
         console.log('Query All properties');
+        console.log('userid:' + req.user.id)
         this.Properties.retrieveAllProperties(res);
     });
 

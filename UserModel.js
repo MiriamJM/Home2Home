@@ -60,7 +60,7 @@ var UserModel = /** @class */ (function () {
     UserModel.prototype.registerGoogleCustomer = function (userid, displayName, response) {
         var _this = this;
         console.log('userid:', userid);
-        this.model.findOne({ "id": userid }).exec(function (err, data) {
+        return this.model.findOne({ "id": userid }).exec(function (err, data) {
             if (data) {
                 console.log("api/user-registration: FAIL - ID already exists");
                 //response.redirect('/');

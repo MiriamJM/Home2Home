@@ -72,7 +72,7 @@ class UserModel {
 
     public registerGoogleCustomer(userid: String, displayName: String,  response: any): any{
         console.log('userid:', userid);
-        this.model.findOne({ "id": userid }).exec((err, data) => {
+        return this.model.findOne({ "id": userid }).exec((err, data) => {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
             	//response.redirect('/');

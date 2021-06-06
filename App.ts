@@ -90,6 +90,10 @@ class App {
         res.redirect('/#/travelerProfile/' + user.id);
     });
 
+    router.get('/getSession', (req, res) => {
+        console.log('Get session');
+        res.send(this.googlePassportObj);
+    });
 
     router.get('/app/properties/', (req, res) => {
         console.log('Query All properties');

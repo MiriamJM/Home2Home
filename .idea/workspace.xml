@@ -26,8 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80a81c0f-aa62-4ef3-b463-3ff7acbd0fc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/IUserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IUserModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/Qhs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/br.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/hma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/house1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/house1a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/jeffhs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/p-img.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

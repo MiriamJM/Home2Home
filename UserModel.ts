@@ -76,7 +76,7 @@ class UserModel {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
             	response.redirect('/');
-            }else{
+            } else {
                 var user = {
                     userId: userid,
                     fName: displayName,

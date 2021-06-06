@@ -76,10 +76,10 @@ class UserModel {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
             	response.redirect('/');
-            }else{
+            } else {
                 var user = {
-                    id: userid,
-                    name: displayName,
+                    userId: userid,
+                    fName: displayName,
                 }
                 this.model.create(user, (err, data) => {
                     console.log('api/user-registration: SUCCESS');

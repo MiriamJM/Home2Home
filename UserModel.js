@@ -67,8 +67,8 @@ var UserModel = /** @class */ (function () {
             }
             else {
                 var user = {
-                    id: userid,
-                    name: displayName
+                    userId: userid,
+                    fName: displayName
                 };
                 _this.model.create(user, function (err, data) {
                     console.log('api/user-registration: SUCCESS');

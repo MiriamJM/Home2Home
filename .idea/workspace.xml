@@ -54,6 +54,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/angular/src" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
@@ -203,11 +204,12 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="234" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1621720338536" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622861880260">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622930336808">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622428376812" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622861880260" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622930264307" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1622930336808" />
     <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622428235072">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

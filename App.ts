@@ -28,6 +28,7 @@ class App {
   public Reviews: ReviewModel;
   public idGenerator:number;
   public googlePassportObj:GooglePassport;
+  public User: UserModel;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -77,6 +78,8 @@ class App {
         {failureRedirect: '/' }
     ), 
     (req, res) => {
+        var user = JSON.parse(JSON.stringify(req.user));
+        this.User.registerGoogleCustomer(user.id, user.displayName, res);
         console.log("successully authenticated user and returned to callback page");
         console.log("redirecting to /#/properties");
         res.redirect('/#/property');

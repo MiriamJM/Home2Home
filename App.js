@@ -63,7 +63,7 @@ var App = /** @class */ (function () {
         router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
         router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
             var user = JSON.parse(JSON.stringify(req.user));
-            _this.Users.registerGoogleCustomer(user.id, user.displayName, res);
+            //this.Users.registerGoogleCustomer(user.id, user.displayName, res);
             console.log("successully authenticated user and returned to callback page");
             console.log("redirecting to /#/properties");
             res.redirect('/#/property');

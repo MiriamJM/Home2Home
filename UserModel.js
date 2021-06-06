@@ -63,7 +63,8 @@ var UserModel = /** @class */ (function () {
         this.model.findOne({ "id": userid }).exec(function (err, data) {
             if (data) {
                 console.log("api/user-registration: FAIL - ID already exists");
-                response.redirect('/');
+                //response.redirect('/');
+                return true;
             }
             else {
                 var user = {
@@ -72,8 +73,9 @@ var UserModel = /** @class */ (function () {
                 };
                 _this.model.create(user, function (err, data) {
                     console.log('api/user-registration: SUCCESS');
-                    response.redirect('/');
+                    //response.redirect('/');
                 });
+                return false;
             }
         });
     };

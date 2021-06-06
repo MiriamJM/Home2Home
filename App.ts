@@ -87,6 +87,7 @@ class App {
         this.Users.registerGoogleCustomer(user.id, user.displayName, res);
         console.log("successully authenticated user and returned to callback page");
         console.log("redirecting to /#/properties");
+        //TODO: if statement to determine redirect
         //res.redirect('/#/travelerProfile/' + user.id);
         res.redirect('/#/property/');
     });

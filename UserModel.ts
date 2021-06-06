@@ -75,7 +75,8 @@ class UserModel {
         this.model.findOne({ "id": userid }).exec((err, data) => {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
-            	response.redirect('/');
+            	//response.redirect('/');
+            	return true;
             } else {
                 var user = {
                     userId: userid,
@@ -83,8 +84,9 @@ class UserModel {
                 }
                 this.model.create(user, (err, data) => {
                     console.log('api/user-registration: SUCCESS');
-                    response.redirect('/');
+                    //response.redirect('/');
                 });
+                return false;
             }
         })
     }

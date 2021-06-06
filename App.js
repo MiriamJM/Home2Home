@@ -32,6 +32,7 @@ var App = /** @class */ (function () {
         this.Bookings = new BookingModel_1.BookingModel();
         this.Reviews = new ReviewModel_1.ReviewModel();
         this.googlePassportObj = new GooglePassport_1["default"]();
+        this.User = new UserModel_1.UserModel();
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {

@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="changed directory structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,14 +189,16 @@
     </state>
     <state x="117" y="123" width="1223" height="629" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418758460" />
     <state x="117" y="123" width="1223" height="630" key="DiffContextDialog/0.23.1440.830@0.23.1440.830" timestamp="1622862354358" />
-    <state x="152" y="95" key="MergeDialog" timestamp="1622418679471">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="147" y="133" key="MergeDialog" timestamp="1622938672829">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="152" y="95" key="MergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418679471" />
-    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1622418810709">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="147" y="133" key="MergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1622938672829" />
+    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1622938686282">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418810709" />
+    <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1622938686282" />
     <state x="505" y="147" key="RollbackChangesDialog" timestamp="1621479286486">
       <screen x="0" y="23" width="1440" height="830" />
     </state>

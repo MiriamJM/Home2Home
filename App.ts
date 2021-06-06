@@ -41,6 +41,8 @@ class App {
     this.Bookings = new BookingModel();
     this.Reviews = new ReviewModel();
     this.googlePassportObj = new GooglePassport();
+    this.User = new UserModel();
+
   }
 
   // Configure Express middleware.

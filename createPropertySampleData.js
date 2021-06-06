@@ -34,8 +34,8 @@ reviewsCollection.remove({})
 reviewsCollection.insert(
 	{
 		reviewId: 1,
-		reveiwerId: 111,
-		proeprtyId: 123,
+		reviewerId: 111,
+		propertyId: 123,
 		comment: "very nice",
 		ratting: 5,
 	}
@@ -43,8 +43,8 @@ reviewsCollection.insert(
 reviewsCollection.insert(
 	{
 		reviewId: 2,
-		reveiwerId: 222,
-		proeprtyId: 345,
+		reviewerId: 222,
+		propertyId: 345,
 		comment: "house",
 		ratting: 3,
 	}
@@ -55,7 +55,7 @@ usersCollection = db.getCollection("users")
 usersCollection.remove({})
 usersCollection.insert(
 	{
-		userId: 111,
+		userId: "111",
 		fName: "Jeff",
 		lName: "Smith",
 		password: "pa$$word",
@@ -69,7 +69,7 @@ usersCollection.insert(
 )
 usersCollection.insert(
 	{
-		userId: 222,
+		userId: "222",
 		fName: "Ryan",
 		lName: "Smith",
 		password: "pa$$word",
@@ -88,8 +88,8 @@ bookingsCollection.remove({})
 bookingsCollection.insert(
 	{
 		bookingId: 1,
-		userA: 111,
-		userB: 222,
+		userA: "111",
+		userB: "222",
 		propertyA: 123,
 		propertyB: 345,
 		tripDates: "2021-5-5",
@@ -100,8 +100,8 @@ bookingsCollection.insert(
 bookingsCollection.insert(
 	{
 		bookingId: 2,
-		userA: 333,
-		userB: 444,
+		userA: "333",
+		userB: "444",
 		propertyA: 567,
 		propertyB: 789,
 		tripDates: "2022-1-2",

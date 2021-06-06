@@ -13,8 +13,8 @@ var BookingModel = /** @class */ (function () {
     BookingModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
             bookingId: Number,
-            userA: Number,
-            userB: Number,
+            userA: String,
+            userB: String,
             propertyA: Number,
             propertyB: Number,
             tripDates: String,

@@ -26,10 +26,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="changed directory structure">
+      <change afterPath="$PROJECT_DIR$/assets/img/Qhs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/jeffhs.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppServer.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingModel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PropertyModel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewModel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserModel.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/main.9278ac739c3db4bd78c0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/polyfills-es5.e8620b5a00669872bd17.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/polyfills.93d57ae5857c579a2a03.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/runtime.5f19c9e363a7a5f7d423.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularDist/styles.3e880f01124bb5500452.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +195,8 @@
     <MESSAGE value="commit files" />
     <MESSAGE value="changed directory structure" />
     <MESSAGE value="updated repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated repo" />
+    <MESSAGE value="merge with main" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge with main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621718345641">
@@ -196,11 +213,11 @@
     </state>
     <state x="152" y="95" key="MergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418679471" />
     <state x="147" y="133" key="MergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1622938672829" />
-    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1622938686282">
+    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1623013195595">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418810709" />
-    <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1622938686282" />
+    <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1623013195595" />
     <state x="505" y="147" key="RollbackChangesDialog" timestamp="1621479286486">
       <screen x="0" y="23" width="1440" height="830" />
     </state>

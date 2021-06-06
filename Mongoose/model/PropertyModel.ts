@@ -1,6 +1,6 @@
 import Mongoose = require("mongoose");
-import {DataAccess} from '././DataAccess';
-import {IPropertyModel} from './interfaces/IPropertyModel';
+import {DataAccess} from './../DataAccess';
+import {IPropertyModel} from '../interfaces/IPropertyModel';
 import { STATUS_CODES } from "http";
 
 let mongooseConnection = DataAccess.mongooseConnection;
@@ -36,28 +36,21 @@ class PropertyModel {
 
     public retrieveAllProperties(response: any): any {
         var query = this.model.find({});
-        query.exec((err: any, itemArray: any) => {
-            response.json(itemArray);
-        });
-    }
-
-    public searchProperties(response:any, filter:Object): any {
-        var query = this.model.find(filter);
-        query.exec((err: any, itemArray: any) => {
+        query.exec((err, itemArray) => {
             response.json(itemArray);
         });
     }
 
     public retrievePropertyDetails(response:any, filter:Object) {
         var query = this.model.findOne(filter);
-        query.exec( (err: any, itemArray: any) => {
+        query.exec( (err, itemArray) => {
             response.json(itemArray);
         });
     }
 
     public retrievePropertyCount(response:any, filter:Object) {
         var query = this.model.findOne(filter);
-        query.exec( (err: any, innerPropertyList: { properties: { length: string; }; } | null) => {
+        query.exec( (err, innerPropertyList) => {
             if (err) {
                 console.log('error retrieving count');
             }

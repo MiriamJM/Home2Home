@@ -39,21 +39,21 @@ class UserModel {
 
     public retrieveAllUsers(response: any): any {
         var query = this.model.find({});
-        query.exec((err, itemArray) => {
+        query.exec((err: any, itemArray: any) => {
             response.json(itemArray);
         });
     }
 
     public retrieveUserDetails(response:any, filter:Object) {
         var query = this.model.findOne(filter);
-        query.exec( (err, itemArray) => {
+        query.exec( (err: any, itemArray: any) => {
             response.json(itemArray);
         });
     }
 
     public retrieveUserCount(response:any, filter:Object) {
         var query = this.model.findOne(filter);
-        query.exec( (err, innerUserList) => {
+        query.exec( (err: any, innerUserList: { users: { length: string; }; } | null) => {
             if (err) {
                 console.log('error retrieving count');
             }
@@ -72,7 +72,7 @@ class UserModel {
 
     public registerGoogleCustomer(userid: String, displayName: String,  response: any): any{
         console.log('userid:', userid);
-        this.model.findOne({ "id": userid }).exec((err, data) => {
+        this.model.findOne({ "id": userid }).exec((err: any, data: any) => {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
             	response.redirect('/');
@@ -81,7 +81,7 @@ class UserModel {
                     id: userid,
                     name: displayName,
                 }
-                this.model.create(user, (err, data) => {
+                this.model.create(user, (err: any, data: any) => {
                     console.log('api/user-registration: SUCCESS');
                     response.redirect('/');
                 });

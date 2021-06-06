@@ -27,15 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="80a81c0f-aa62-4ef3-b463-3ff7acbd0fc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Qhs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/br.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/hma.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/house1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/house1a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/jeffhs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/p-img.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +180,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="merge with main" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="221" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623016933866">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="221" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1623016933866" />
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621718345641">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
@@ -252,9 +247,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="393" y="199" key="run.anything.popup/0.23.1440.829@0.23.1440.829" timestamp="1622418616439" />
-    <state x="252" y="179" width="670" height="676" key="search.everywhere.popup" timestamp="1621814582785">
-      <screen x="0" y="23" width="1440" height="832" />
+    <state x="252" y="178" width="670" height="674" key="search.everywhere.popup" timestamp="1623016780949">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="252" y="178" width="670" height="674" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1623016780949" />
     <state x="252" y="179" width="670" height="676" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1621814582785" />
   </component>
 </project>

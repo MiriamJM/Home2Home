@@ -71,7 +71,12 @@ var App = /** @class */ (function () {
             _this.Users.registerGoogleCustomer(user.id, user.displayName, res);
             console.log("successully authenticated user and returned to callback page");
             console.log("redirecting to /#/properties");
-            res.redirect('/#/travelerProfile/' + user.id);
+            //res.redirect('/#/travelerProfile/' + user.id);
+            res.redirect('/#/property/');
+        });
+        router.get('/getSession', function (req, res) {
+            console.log('Get session');
+            res.send(_this.googlePassportObj);
         });
         router.get('/app/properties/', function (req, res) {
             console.log('Query All properties');

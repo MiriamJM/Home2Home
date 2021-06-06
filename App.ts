@@ -84,12 +84,16 @@ class App {
     ), 
     (req, res) => {
         var user = JSON.parse(JSON.stringify(req.user));
-        this.Users.registerGoogleCustomer(user.id, user.displayName, res);
-        console.log("successully authenticated user and returned to callback page");
-        console.log("redirecting to /#/properties");
+        if (this.Users.registerGoogleCustomer(user.id, user.displayName, res)) {
+            res.redirect('/#/travelerProfile/' + user.id);
+        }
+        else {
+        //console.log("successully authenticated user and returned to callback page");
+        //console.log("redirecting to /#/properties");
         //TODO: if statement to determine redirect
         //res.redirect('/#/travelerProfile/' + user.id);
-        res.redirect('/#/property/');
+            res.redirect('/#/property/');
+        }
     });
 
     router.get('/getSession', (req, res) => {

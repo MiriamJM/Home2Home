@@ -68,12 +68,16 @@ var App = /** @class */ (function () {
         router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
         router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
             var user = JSON.parse(JSON.stringify(req.user));
-            _this.Users.registerGoogleCustomer(user.id, user.displayName, res);
-            console.log("successully authenticated user and returned to callback page");
-            console.log("redirecting to /#/properties");
-            //TODO: if statement to determine redirect
-            //res.redirect('/#/travelerProfile/' + user.id);
-            res.redirect('/#/property/');
+            if (_this.Users.registerGoogleCustomer(user.id, user.displayName, res)) {
+                res.redirect('/#/travelerProfile/' + user.id);
+            }
+            else {
+                //console.log("successully authenticated user and returned to callback page");
+                //console.log("redirecting to /#/properties");
+                //TODO: if statement to determine redirect
+                //res.redirect('/#/travelerProfile/' + user.id);
+                res.redirect('/#/property/');
+            }
         });
         router.get('/getSession', function (req, res) {
             console.log('Get session');

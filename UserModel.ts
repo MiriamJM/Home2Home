@@ -78,8 +78,8 @@ class UserModel {
             	response.redirect('/');
             }else{
                 var user = {
-                    id: userid,
-                    name: displayName,
+                    userId: userid,
+                    fName: displayName,
                 }
                 this.model.create(user, (err, data) => {
                     console.log('api/user-registration: SUCCESS');

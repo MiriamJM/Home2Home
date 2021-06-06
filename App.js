@@ -32,7 +32,6 @@ var App = /** @class */ (function () {
         this.Bookings = new BookingModel_1.BookingModel();
         this.Reviews = new ReviewModel_1.ReviewModel();
         this.googlePassportObj = new GooglePassport_1["default"]();
-        this.User = new UserModel_1.UserModel();
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
@@ -64,7 +63,7 @@ var App = /** @class */ (function () {
         router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
         router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
             var user = JSON.parse(JSON.stringify(req.user));
-            _this.User.registerGoogleCustomer(user.id, user.displayName, res);
+            _this.Users.registerGoogleCustomer(user.id, user.displayName, res);
             console.log("successully authenticated user and returned to callback page");
             console.log("redirecting to /#/properties");
             res.redirect('/#/property');

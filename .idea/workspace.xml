@@ -27,6 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="80a81c0f-aa62-4ef3-b463-3ff7acbd0fc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,12 +227,12 @@
     </state>
     <state x="234" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1621720338536" />
     <state x="234" y="78" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1623014085424" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622930336808">
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1623057883834">
       <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622428376812" />
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622930264307" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1622930336808" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1623057883834" />
     <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623036301036">
       <screen x="0" y="23" width="1440" height="831" />
     </state>

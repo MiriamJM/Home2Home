@@ -15,6 +15,7 @@ import { BookingModel } from './BookingModel';
 import { ReviewModel } from './ReviewModel';
 import GooglePassportObj from './GooglePassport';
 import * as passport from 'passport';
+import * as uniqid from 'uniqid';
 //import {DataAccess} from './DataAccess';
 //test
 // Creates and configures an ExpressJS web server.
@@ -28,6 +29,7 @@ class App {
   public Reviews: ReviewModel;
   public idGenerator:number;
   public googlePassportObj:GooglePassportObj;
+
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -52,6 +54,7 @@ class App {
     this.expressApp.use(cookieParser());
     this.expressApp.use(passport.initialize());
     this.expressApp.use(passport.session());
+
   }
 
 
@@ -111,15 +114,16 @@ class App {
 
     router.post('/app/properties/', (req, res) => {
        console.log(req.body);
+       let id = uniqid();
        let jsonObj = req.body;
-       jsonObj.propertyId = this.idGenerator;
+       jsonObj.propertyId = id;
         this.Properties.model.create([jsonObj], (err) => {
            if (err) {
                console.log('object creation failed');
            }
        });
-       res.send(this.idGenerator.toString());
-       this.idGenerator++;
+       res.send(id);
+       //this.idGenerator++;
        this.Users.updateUserProperty(res, {userId:jsonObj.owner}, {propertyId:jsonObj.propertyId});
     });
 

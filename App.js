@@ -17,6 +17,7 @@ var BookingModel_1 = require("./BookingModel");
 var ReviewModel_1 = require("./ReviewModel");
 var GooglePassport_1 = require("./GooglePassport");
 var passport = require("passport");
+var uniqid = require("uniqid");
 //import {DataAccess} from './DataAccess';
 //test
 // Creates and configures an ExpressJS web server.
@@ -88,15 +89,16 @@ var App = /** @class */ (function () {
         });
         router.post('/app/properties/', function (req, res) {
             console.log(req.body);
+            var id = uniqid();
             var jsonObj = req.body;
-            jsonObj.propertyId = _this.idGenerator;
+            jsonObj.propertyId = id;
             _this.Properties.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('object creation failed');
                 }
             });
-            res.send(_this.idGenerator.toString());
-            _this.idGenerator++;
+            res.send(id);
+            //this.idGenerator++;
             _this.Users.updateUserProperty(res, { userId: jsonObj.owner }, { propertyId: jsonObj.propertyId });
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {

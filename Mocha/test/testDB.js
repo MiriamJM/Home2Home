@@ -15,7 +15,7 @@ describe('Test property result', function () {
 	var response;
 		 
     before(function (done) {
-        chai.request("http://localhost:8080")
+		chai.request("https://home2homeswap.azurewebsites.net")
 			.get("/app/properties")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -57,7 +57,7 @@ describe('Test property result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("http://localhost:8080")
+		chai.request("https://home2homeswap.azurewebsites.net")
 			.get("/app/properties/123")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -97,7 +97,7 @@ describe('Test Travler result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("http://localhost:8080")
+		chai.request("https://home2homeswap.azurewebsites.net")
 			.get("/app/users")
 			.end(function (err, res) {
 				requestResult = res.body;

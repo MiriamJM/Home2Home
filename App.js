@@ -146,13 +146,13 @@ var App = /** @class */ (function () {
         router.post('/app/bookings/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-            //jsonObj.bookingId = this.idGenerator;
+            jsonObj.bookingId = _this.idGenerator;
             _this.Bookings.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('object creation failed');
                 }
             });
-            res.send(_this.idGenerator.toString());
+            res.send({ bookingId: _this.idGenerator.toString() });
             _this.idGenerator++;
         });
         router.get('/app/reviews/', function (req, res) {

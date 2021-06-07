@@ -97,8 +97,8 @@ class App {
     });
 
     router.get('/app/properties/', (req, res) => {
-        console.log('Query All properties');
-        console.log('userid:' + req.user.id)
+        //console.log('Query All properties');
+        //console.log('userid:' + req.user.id)
         this.Properties.retrieveAllProperties(res);
     });
 

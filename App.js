@@ -88,7 +88,7 @@ var App = /** @class */ (function () {
         router.post('/app/properties/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-            //jsonObj.propertyId = this.idGenerator;
+            jsonObj.propertyId = _this.idGenerator;
             _this.Properties.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('object creation failed');

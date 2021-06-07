@@ -19,7 +19,7 @@ class UserModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                userId: Number,
+                userId: String,
                 fName: String,
                 lName: String,
                 password: String,
@@ -27,7 +27,7 @@ class UserModel {
                 phoneNumber: String,
                 locationPreferences: [String],
                 datePreferences: [Date],
-                properties: Number,
+                properties: String,
                 bookings: Number,
             }, {collection: 'users'}
         );
@@ -70,21 +70,31 @@ class UserModel {
         });
     }
 
+    public updateUserProperty(response:any, filter:Object, update:Object) {
+        var query = this.model.findOneAndUpdate(filter, update);
+        query.exec( (err, itemArray) => {
+            response.json(itemArray);
+        });
+    }
+
     public registerGoogleCustomer(userid: String, displayName: String,  response: any): any{
         console.log('userid:', userid);
-        this.model.findOne({ "id": userid }).exec((err, data) => {
+        this.model.findOne({userId: userid }).exec((err, data) => {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
-            	response.redirect('/');
-            }else{
+            	response.redirect('/#/travelerProfile/');
+            	//return true;
+            } else {
                 var user = {
                     userId: userid,
                     fName: displayName,
                 }
                 this.model.create(user, (err, data) => {
                     console.log('api/user-registration: SUCCESS');
-                    response.redirect('/');
+                    //response.redirect('/#/addTravelerProperty/');
+                    response.redirect('/#/travelerProfile/');
                 });
+                //return false;
             }
         })
     }

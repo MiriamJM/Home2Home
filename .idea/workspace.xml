@@ -25,8 +25,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58efc178-d35d-47e0-83a5-0e191dd3ba8a" name="Default Changelist" comment="changed directory structure">
+    <list default="true" id="80a81c0f-aa62-4ef3-b463-3ff7acbd0fc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/BookingModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookingModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PropertyModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/PropertyModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PropertyModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PropertyModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createPropertySampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/createPropertySampleData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/IBookingModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IBookingModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/IPropertyModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IPropertyModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/IUserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IUserModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +48,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/MiriamJM/Home2Home" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -54,20 +73,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/angular/src" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="Shelf.Project.Settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angularDist" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/home2home" />
       <recent name="$PROJECT_DIR$/home2home/src" />
       <recent name="$PROJECT_DIR$/angular" />
-      <recent name="$PROJECT_DIR$/" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/angular/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -142,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622428369613</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated repo">
+      <created>1622861871404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622861871404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,53 +194,71 @@
     <MESSAGE value="Creating property component" />
     <MESSAGE value="commit files" />
     <MESSAGE value="changed directory structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed directory structure" />
+    <MESSAGE value="updated repo" />
+    <MESSAGE value="merge with main" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge with main" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="339" y="268" key="#Notifications" timestamp="1623023636039">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="339" y="268" key="#Notifications/0.23.1440.832@0.23.1440.832" timestamp="1623023636039" />
+    <state x="221" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623016933866">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="221" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1623016933866" />
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621718345641">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="409" y="248" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.830@0.23.1440.830" timestamp="1621718345641" />
-    <state x="117" y="123" width="1223" height="629" key="DiffContextDialog" timestamp="1622418758460">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="117" y="123" width="1223" height="632" key="DiffContextDialog" timestamp="1623014212147">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="117" y="123" width="1223" height="629" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418758460" />
-    <state x="152" y="95" key="MergeDialog" timestamp="1622418679471">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="117" y="123" width="1223" height="630" key="DiffContextDialog/0.23.1440.830@0.23.1440.830" timestamp="1622862354358" />
+    <state x="117" y="123" width="1223" height="632" key="DiffContextDialog/0.23.1440.832@0.23.1440.832" timestamp="1623014212147" />
+    <state x="147" y="133" key="MergeDialog" timestamp="1622938672829">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="152" y="95" key="MergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418679471" />
-    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1622418810709">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="147" y="133" key="MergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1622938672829" />
+    <state x="366" y="207" key="MultipleFileMergeDialog" timestamp="1623013195595">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1622418810709" />
+    <state x="366" y="207" key="MultipleFileMergeDialog/0.23.1440.830@0.23.1440.830" timestamp="1623013195595" />
     <state x="505" y="147" key="RollbackChangesDialog" timestamp="1621479286486">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="505" y="147" key="RollbackChangesDialog/0.23.1440.830@0.23.1440.830" timestamp="1621479286486" />
-    <state x="234" y="78" key="SettingsEditor" timestamp="1621720338536">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="234" y="78" key="SettingsEditor" timestamp="1623014085424">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="234" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1621720338536" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1622428376812">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="234" y="78" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1623014085424" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1623057883834">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622428376812" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1621726355176" />
-    <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622428235072">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622930264307" />
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1623057883834" />
+    <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623036301036">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.829@0.23.1440.829" timestamp="1622428235072" />
     <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.830@0.23.1440.830" timestamp="1621726319321" />
+    <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1623036301036" />
+    <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.832@0.23.1440.832" timestamp="1623014166885" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.833@0.23.1440.833" timestamp="1621804401594" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1621806636719" />
-    <state x="560" y="192" width="735" height="491" key="find.popup" timestamp="1622425418940">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="560" y="193" width="632" height="548" key="find.popup" timestamp="1623055409186">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="647" y="152" width="735" height="534" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1622422993192" />
-    <state x="560" y="192" width="735" height="491" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1622425418940" />
-    <state x="560" y="193" width="632" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1621725665904" />
-    <state x="560" y="193" width="632" height="491" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1621731050042" />
-    <state x="560" y="193" width="632" height="492" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1621820111384" />
+    <state x="514" y="198" width="735" height="491" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1623020645559" />
+    <state x="560" y="193" width="707" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1622945609892" />
+    <state x="560" y="193" width="632" height="491" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1623036170847" />
+    <state x="560" y="193" width="632" height="548" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1623055409186" />
     <state x="467" y="249" key="git4idea.branch.GitSmartOperationDialog" timestamp="1621634281363">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
@@ -226,9 +271,11 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="393" y="199" key="run.anything.popup/0.23.1440.829@0.23.1440.829" timestamp="1622418616439" />
-    <state x="252" y="179" width="670" height="676" key="search.everywhere.popup" timestamp="1621814582785">
-      <screen x="0" y="23" width="1440" height="832" />
+    <state x="252" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1623095259665">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
+    <state x="252" y="178" width="670" height="674" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1623016780949" />
+    <state x="252" y="178" width="670" height="676" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1623095259665" />
     <state x="252" y="179" width="670" height="676" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1621814582785" />
   </component>
 </project>

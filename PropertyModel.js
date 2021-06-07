@@ -12,14 +12,15 @@ var PropertyModel = /** @class */ (function () {
     }
     PropertyModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            propertyId: Number,
+            propertyId: String,
             propertyName: String,
             description: String,
             bedrooms: Number,
             bathrooms: Number,
             sqFeet: Number,
             address: String,
-            averageRating: Number
+            averageRating: Number,
+            owner: String
         }, { collection: 'properties' });
     };
     PropertyModel.prototype.createModel = function () {

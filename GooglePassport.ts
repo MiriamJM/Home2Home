@@ -17,7 +17,7 @@ class GooglePassport {
         passport.use(new GoogleStrategy({
                 clientID: this.clientId,
                 clientSecret: this.secretId,
-                callbackURL: "https://home2homeswap.azurewebsites.net/auth/google/callback"
+                callbackURL: "https://home2hometravel.azurewebsites.net/auth/google/callback"
 //                profileFields: ['id', 'displayName', 'emails']
             },
             (accessToken, refreshToken, profile, done) => {
@@ -41,7 +41,5 @@ class GooglePassport {
             done(null, user);
         });
     }
-
-    
 }
 export default GooglePassport;

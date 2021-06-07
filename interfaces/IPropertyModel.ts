@@ -1,7 +1,7 @@
 import Mongoose = require("mongoose");
 
 interface IPropertyModel extends Mongoose.Document {
-    propertyId: number;
+    propertyId: string;
     propertyName: string;
     description: string;
     bedrooms: number;
@@ -9,6 +9,7 @@ interface IPropertyModel extends Mongoose.Document {
     sqFeet: number;
     address: string;
     averageRating: number;
+    owner: string;
 }
 
 export {IPropertyModel};

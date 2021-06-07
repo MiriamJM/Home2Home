@@ -43,6 +43,11 @@ describe('Test property result', function () {
 				for (var i = 0; i < body.length; i++) {
 					expect(body[i]).to.have.property('propertyId');
 					expect(body[i]).to.have.property('propertyName');
+					expect(body[i]).to.have.property('description');
+					expect(body[i]).to.have.property('bedrooms');
+					expect(body[i]).to.have.property('bathrooms');
+					expect(body[i]).to.have.property('address');
+					expect(body[i]).to.have.property('owner');
 				}
 				return true;
 			});
@@ -84,6 +89,12 @@ describe('Test property result', function () {
 
 				expect(body).to.have.property('propertyId');
 				expect(body).to.have.property('propertyName');
+				expect(body).to.have.property('description');
+				expect(body).to.have.property('bedrooms');
+				expect(body).to.have.property('bathrooms');
+				expect(body).to.have.property('sqFeet');
+				expect(body).to.have.property('address');
+				expect(body).to.have.property('owner');
 				return true;
 			});
 	});
@@ -125,6 +136,8 @@ describe('Test Travler result', function () {
 				for (var i = 0; i < body.length; i++) {
 					expect(body[i]).to.have.property('userId');
 					expect(body[i]).to.have.property('fName');
+					expect(body[i]).to.have.property('locationPreferences');
+					expect(body[i]).to.have.property('datePreferences');
 				}
 				return true;
 			});

@@ -6,13 +6,16 @@ import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 //var MongoClient = require('mongodb').MongoClient;
 //var Q = require('q');
+import * as cookieParser from 'cookie-parser';
+import * as session from 'express-session';
 
 import { PropertyModel } from './PropertyModel';
 import { UserModel } from './UserModel';
 import { BookingModel } from './BookingModel';
 import { ReviewModel } from './ReviewModel';
-import GooglePassport from './GooglePassport';
+import GooglePassportObj from './GooglePassport';
 import * as passport from 'passport';
+import * as uniqid from 'uniqid';
 //import {DataAccess} from './DataAccess';
 //test
 // Creates and configures an ExpressJS web server.
@@ -25,8 +28,8 @@ class App {
   public Bookings: BookingModel;
   public Reviews: ReviewModel;
   public idGenerator:number;
-  public googlePassportObj:GooglePassport;
-  public User: UserModel;
+  public googlePassportObj:GooglePassportObj;
+
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -38,7 +41,8 @@ class App {
     this.Users = new UserModel();
     this.Bookings = new BookingModel();
     this.Reviews = new ReviewModel();
-    this.googlePassportObj = new GooglePassport();
+    this.googlePassportObj = new GooglePassportObj();
+
   }
 
   // Configure Express middleware.
@@ -46,16 +50,23 @@ class App {
     this.expressApp.use(logger('dev'));
     this.expressApp.use(bodyParser.json());
     this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+    this.expressApp.use(session({ secret:'25WHY8jYAJ5xicSffPyjgWeQ'}));
+    this.expressApp.use(cookieParser());
     this.expressApp.use(passport.initialize());
     this.expressApp.use(passport.session());
+
   }
 
 
   private validateAuth(req, res, next):void {
-    if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
-    console.log("user is not authenticated");
+    if (req.isAuthenticated()) return next();
     res.redirect('/');
   }
+
+    private validateAuthAPI(req, res, next):void {
+        if (req.user) return next();
+        res.send({});
+    }
 
   // Configure API endpoints.
   private routes(): void {
@@ -75,35 +86,46 @@ class App {
     ), 
     (req, res) => {
         var user = JSON.parse(JSON.stringify(req.user));
-        this.User.registerGoogleCustomer(user.id, user.displayName, res);
-        console.log("successully authenticated user and returned to callback page");
-        console.log("redirecting to /#/properties");
-        res.redirect('/#/property');
+        this.Users.registerGoogleCustomer(user.id, user.displayName, res);
     });
 
+   router.get('/api/auth-data', this.validateAuthAPI, (req, res) => {
+        var user = JSON.parse(JSON.stringify(req.user));
+        return res.send({ userId: user.id });
+    });
+
+    router.get('/auth/log-out', (req, res) => {
+        req.logout();
+        res.redirect('/');
+    });
 
     router.get('/app/properties/', (req, res) => {
-        console.log('Query All properties');
+        //console.log('Query All properties');
+        //console.log('userid:' + req.user.id)
         this.Properties.retrieveAllProperties(res);
     });
 
-    router.get('/app/properties/:propertyId', (req, res) => {
-        var id = req.params.propertyId;
+    router.get('/app/properties/:owner', (req, res) => {
+        //var id = req.params.propertyId;
+        var id = req.params.owner;
         console.log('Query single property with id: ' + id);
-        this.Properties.retrievePropertyDetails(res, { propertyId: id});
+        this.Properties.retrievePropertyDetails(res, { owner: id});
     });
 
     router.post('/app/properties/', (req, res) => {
        console.log(req.body);
-       var jsonObj = req.body;
+       let id = uniqid();
+       let jsonObj = req.body;
        //jsonObj.propertyId = this.idGenerator;
+       jsonObj.propertyId = id;
         this.Properties.model.create([jsonObj], (err) => {
            if (err) {
                console.log('object creation failed');
            }
        });
-       res.send(this.idGenerator.toString());
-       this.idGenerator++;
+       res.send(id);
+       //this.idGenerator++;
+       this.Users.updateUserProperty(res, {userId:jsonObj.owner}, {propertyId:jsonObj.propertyId});
     });
 
     router.get('/app/searchForHomes/:location-:guests', (req, res) => {
@@ -137,7 +159,13 @@ class App {
        res.send(this.idGenerator.toString());
        this.idGenerator++;
     });
-
+/*
+    router.post('/app/users/:userId', (req, res) => {
+       console.log(req.body);
+       //var jsonObj = req.body;
+       this.Users.updateUserProperty
+    });
+*/
     router.get('/app/bookings/', (req, res) => {
         console.log('Query All bookings');
         this.Bookings.retrieveAllBookings(res);
@@ -151,15 +179,16 @@ class App {
 
 
     router.post('/app/bookings/', (req, res) => {
+       let id = uniqid();
        console.log(req.body);
        var jsonObj = req.body;
-       //jsonObj.bookingId = this.idGenerator;
+       jsonObj.bookingId = id;
         this.Bookings.model.create([jsonObj], (err) => {
            if (err) {
                console.log('object creation failed');
            }
        });
-       res.send(this.idGenerator.toString());
+       res.send({ bookingId: id });
        this.idGenerator++;
     });
 

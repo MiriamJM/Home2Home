@@ -1,11 +1,11 @@
 import Mongoose = require("mongoose");
 
 interface IBookingModel extends Mongoose.Document {
-    bookingId: number;
-    userA: number;
-    userB: number;
-    propertyA: number;
-    propertyB: number;
+    bookingId: string;
+    userA: string;
+    userB: string;
+    propertyA: string;
+    propertyB: string;
     tripDates: string;
     dateRequested: string;
     dateConfirmed: string;

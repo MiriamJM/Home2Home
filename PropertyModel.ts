@@ -18,14 +18,15 @@ class PropertyModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                propertyId: Number,
+                propertyId: String,
                 propertyName: String,
                 description: String,
                 bedrooms: Number,
                 bathrooms: Number,
                 sqFeet: Number,
                 address: String,
-                averageRating: Number
+                averageRating: Number,
+                owner: String,
             }, {collection: 'properties'}
         );
     }
@@ -73,6 +74,22 @@ class PropertyModel {
             }
         });
     }
+
+    /*public createProperty(name: string, description: string, bedrooms: number,
+    bathrooms: number, sqFeet: number, address: string ) {
+        let newProperty = {
+            propertyName: name,
+            description: description,
+            bedrooms: bedrooms,
+            bathrooms: bathrooms,
+            sqFeet: sqFeet,
+            address: address,
+        }
+        this.model.create(property, (err, data) => {
+            console.log('api/user-registration: SUCCESS');
+            response.redirect('/#/travelerProfile/');
+        });
+    }*/
 
 }
 export {PropertyModel};

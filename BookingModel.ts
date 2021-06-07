@@ -18,11 +18,11 @@ class BookingModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-               bookingId: Number,
-               userA: Number,
-               userB: Number,
-               propertyA: Number,
-               propertyB: Number,
+               bookingId: String,
+               userA: String,
+               userB: String,
+               propertyA: String,
+               propertyB: String,
                tripDates: String,
                dateRequested: String,
                dateConfirmed: String,

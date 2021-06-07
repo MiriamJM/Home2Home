@@ -12,7 +12,7 @@ var UserModel = /** @class */ (function () {
     }
     UserModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            userId: Number,
+            userId: String,
             fName: String,
             lName: String,
             password: String,
@@ -20,7 +20,7 @@ var UserModel = /** @class */ (function () {
             phoneNumber: String,
             locationPreferences: [String],
             datePreferences: [Date],
-            properties: Number,
+            properties: String,
             bookings: Number
         }, { collection: 'users' });
     };
@@ -57,23 +57,32 @@ var UserModel = /** @class */ (function () {
             }
         });
     };
+    UserModel.prototype.updateUserProperty = function (response, filter, update) {
+        var query = this.model.findOneAndUpdate(filter, update);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
+    };
     UserModel.prototype.registerGoogleCustomer = function (userid, displayName, response) {
         var _this = this;
         console.log('userid:', userid);
-        this.model.findOne({ "id": userid }).exec(function (err, data) {
+        this.model.findOne({ userId: userid }).exec(function (err, data) {
             if (data) {
                 console.log("api/user-registration: FAIL - ID already exists");
-                response.redirect('/');
+                response.redirect('/#/travelerProfile/');
+                //return true;
             }
             else {
                 var user = {
-                    id: userid,
-                    name: displayName
+                    userId: userid,
+                    fName: displayName
                 };
                 _this.model.create(user, function (err, data) {
                     console.log('api/user-registration: SUCCESS');
-                    response.redirect('/');
+                    //response.redirect('/#/addTravelerProperty/');
+                    response.redirect('/#/travelerProfile/');
                 });
+                //return false;
             }
         });
     };

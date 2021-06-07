@@ -119,6 +119,7 @@ class App {
        });
        res.send(this.idGenerator.toString());
        this.idGenerator++;
+       this.Users.updateUserProperty(req.params.userId, req.params.propertyId);
     });
 
     router.get('/app/searchForHomes/:location-:guests', (req, res) => {
@@ -152,7 +153,13 @@ class App {
        res.send(this.idGenerator.toString());
        this.idGenerator++;
     });
-
+/*
+    router.post('/app/users/:userId', (req, res) => {
+       console.log(req.body);
+       //var jsonObj = req.body;
+       this.Users.updateUserProperty
+    });
+*/
     router.get('/app/bookings/', (req, res) => {
         console.log('Query All bookings');
         this.Bookings.retrieveAllBookings(res);

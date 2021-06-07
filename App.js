@@ -96,6 +96,7 @@ var App = /** @class */ (function () {
             });
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
+            _this.Users.updateUserProperty(req.params.userId, req.params.propertyId);
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {
             var location = req.params.location;
@@ -125,6 +126,13 @@ var App = /** @class */ (function () {
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
         });
+        /*
+            router.post('/app/users/:userId', (req, res) => {
+               console.log(req.body);
+               //var jsonObj = req.body;
+               this.Users.updateUserProperty
+            });
+        */
         router.get('/app/bookings/', function (req, res) {
             console.log('Query All bookings');
             _this.Bookings.retrieveAllBookings(res);

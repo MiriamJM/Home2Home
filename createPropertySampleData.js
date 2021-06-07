@@ -4,7 +4,7 @@ propertiesCollection = db.getCollection("properties")
 propertiesCollection.remove({})
 propertiesCollection.insert(
 	{
-		propertyId: 345,
+		propertyId: "345",
 		propertyName: "Ryans House",
 		description: "Seattle House",
 		bedrooms: 3,
@@ -17,7 +17,7 @@ propertiesCollection.insert(
 )
 propertiesCollection.insert(
 	{
-		propertyId: 123,
+		propertyId: "123",
 		propertyName: "Jeffs House",
 		description: "Seattle House",
 		bedrooms: 2,
@@ -65,8 +65,8 @@ usersCollection.insert(
 		phoneNumber: "5555555",
 		locationPreferences: ["seattle", "London"],
 		datePreferences: ['2021-5-5'],
-		properties: 123,
-		bookings: 1,
+		properties: "123",
+		bookings: "1",
 	}
 )
 usersCollection.insert(
@@ -79,8 +79,8 @@ usersCollection.insert(
 		phoneNumber: "5555555",
 		locationPreferences: ["Madrid"],
 		datePreferences: ['2021-5-5'],
-		properties: 345,
-		bookings: 1,
+		properties: "345",
+		bookings: "1",
 	}
 )
 
@@ -89,11 +89,11 @@ bookingsCollection = db.getCollection("bookings")
 bookingsCollection.remove({})
 bookingsCollection.insert(
 	{
-		bookingId: 1,
+		bookingId: "1",
 		userA: "111",
 		userB: "222",
-		propertyA: 123,
-		propertyB: 345,
+		propertyA: "123",
+		propertyB: "345",
 		tripDates: "2021-5-5",
 		dateRequested: "2021-4-5",
 		dateConfirmed: "2021-4-6",
@@ -101,11 +101,11 @@ bookingsCollection.insert(
 )
 bookingsCollection.insert(
 	{
-		bookingId: 2,
+		bookingId: "2",
 		userA: "333",
 		userB: "444",
-		propertyA: 567,
-		propertyB: 789,
+		propertyA: "567",
+		propertyB: "789",
 		tripDates: "2022-1-2",
 		dateRequested: "2021-5-5",
 		dateConfirmed: "2021-5-5",

@@ -18,7 +18,7 @@ class PropertyModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                propertyId: Number,
+                propertyId: String,
                 propertyName: String,
                 description: String,
                 bedrooms: Number,

@@ -20,7 +20,7 @@ var UserModel = /** @class */ (function () {
             phoneNumber: String,
             locationPreferences: [String],
             datePreferences: [Date],
-            properties: Number,
+            properties: String,
             bookings: Number
         }, { collection: 'users' });
     };

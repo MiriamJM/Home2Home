@@ -116,14 +116,15 @@ class App {
        console.log(req.body);
        let id = uniqid();
        let jsonObj = req.body;
+       //jsonObj.propertyId = this.idGenerator;
        jsonObj.propertyId = id;
         this.Properties.model.create([jsonObj], (err) => {
            if (err) {
                console.log('object creation failed');
            }
        });
-       res.send(id);
-       //this.idGenerator++;
+       res.send(this.idGenerator.toString());
+       this.idGenerator++;
        this.Users.updateUserProperty(res, {userId:jsonObj.owner}, {propertyId:jsonObj.propertyId});
     });
 

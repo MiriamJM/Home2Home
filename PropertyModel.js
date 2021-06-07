@@ -12,7 +12,7 @@ var PropertyModel = /** @class */ (function () {
     }
     PropertyModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            propertyId: Number,
+            propertyId: String,
             propertyName: String,
             description: String,
             bedrooms: Number,

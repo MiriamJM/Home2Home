@@ -91,14 +91,15 @@ var App = /** @class */ (function () {
             console.log(req.body);
             var id = uniqid();
             var jsonObj = req.body;
+            //jsonObj.propertyId = this.idGenerator;
             jsonObj.propertyId = id;
             _this.Properties.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('object creation failed');
                 }
             });
-            res.send(id);
-            //this.idGenerator++;
+            res.send(_this.idGenerator.toString());
+            _this.idGenerator++;
             _this.Users.updateUserProperty(res, { userId: jsonObj.owner }, { propertyId: jsonObj.propertyId });
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {

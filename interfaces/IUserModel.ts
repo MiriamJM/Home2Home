@@ -9,8 +9,8 @@ interface IUserModel extends Mongoose.Document {
   phoneNumber: string,
   locationPreferences: [string],
   datePreferences: [Date],
-  properties: number,
-  bookings: number
+  properties: string,
+  bookings: string,
 }
 
 export {IUserModel};

@@ -20,7 +20,7 @@ var PropertyModel = /** @class */ (function () {
             sqFeet: Number,
             address: String,
             averageRating: Number,
-            owner: Number
+            owner: String
         }, { collection: 'properties' });
     };
     PropertyModel.prototype.createModel = function () {

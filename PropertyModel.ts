@@ -26,7 +26,7 @@ class PropertyModel {
                 sqFeet: Number,
                 address: String,
                 averageRating: Number,
-                owner: Number,
+                owner: String,
             }, {collection: 'properties'}
         );
     }

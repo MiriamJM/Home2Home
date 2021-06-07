@@ -91,11 +91,10 @@ class App {
         return res.send({ userId: user.id });
     });
 
-    router.get('/getSession', (req, res) => {
-        console.log('Get session');
-        res.send(this.googlePassportObj);
+    router.get('/auth/log-out', (req, res) => {
+        req.logout();
+        res.redirect('/');
     });
-
 
     router.get('/app/properties/', (req, res) => {
         console.log('Query All properties');

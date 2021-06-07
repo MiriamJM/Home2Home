@@ -71,9 +71,9 @@ var App = /** @class */ (function () {
             var user = JSON.parse(JSON.stringify(req.user));
             return res.send({ userId: user.id });
         });
-        router.get('/getSession', function (req, res) {
-            console.log('Get session');
-            res.send(_this.googlePassportObj);
+        router.get('/auth/log-out', function (req, res) {
+            req.logout();
+            res.redirect('/');
         });
         router.get('/app/properties/', function (req, res) {
             console.log('Query All properties');

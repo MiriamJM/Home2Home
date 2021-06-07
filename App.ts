@@ -179,15 +179,16 @@ class App {
 
 
     router.post('/app/bookings/', (req, res) => {
+       let id = uniqid();
        console.log(req.body);
        var jsonObj = req.body;
-       jsonObj.bookingId = this.idGenerator;
+       jsonObj.bookingId = id;
         this.Bookings.model.create([jsonObj], (err) => {
            if (err) {
                console.log('object creation failed');
            }
        });
-       res.send({ bookingId: this.idGenerator.toString() });
+       res.send({ bookingId: id });
        this.idGenerator++;
     });
 

@@ -70,10 +70,11 @@ class UserModel {
         });
     }
 
-    public updateUserProperty(userid:string, propertyid:number) {
-        var filter = {userId: userid};
-        var update = {propertyId: propertyid};
-        var query = this.model.findOneAndUpdate({userId:userid}, {propertyId: propertyid});
+    public updateUserProperty(response:any, filter:Object, update:Object) {
+        var query = this.model.findOneAndUpdate(filter, update);
+        query.exec( (err, itemArray) => {
+            response.json(itemArray);
+        });
     }
 
     public registerGoogleCustomer(userid: String, displayName: String,  response: any): any{

@@ -103,9 +103,10 @@ class App {
     });
 
     router.get('/app/properties/:propertyId', (req, res) => {
-        var id = req.params.propertyId;
+        //var id = req.params.propertyId;
+        var id = req.params.owner;
         console.log('Query single property with id: ' + id);
-        this.Properties.retrievePropertyDetails(res, { propertyId: id});
+        this.Properties.retrievePropertyDetails(res, { owner: id});
     });
 
     router.post('/app/properties/', (req, res) => {
@@ -119,7 +120,7 @@ class App {
        });
        res.send(this.idGenerator.toString());
        this.idGenerator++;
-       this.Users.updateUserProperty(req.params.owner, jsonObj.propertyId);
+       this.Users.updateUserProperty(res, {userId:jsonObj.owner}, {propertyId:jsonObj.propertyId});
     });
 
     router.get('/app/searchForHomes/:location-:guests', (req, res) => {

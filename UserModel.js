@@ -57,10 +57,11 @@ var UserModel = /** @class */ (function () {
             }
         });
     };
-    UserModel.prototype.updateUserProperty = function (userid, propertyid) {
-        var filter = { userId: userid };
-        var update = { propertyId: propertyid };
-        var query = this.model.findOneAndUpdate({ userId: userid }, { propertyId: propertyid });
+    UserModel.prototype.updateUserProperty = function (response, filter, update) {
+        var query = this.model.findOneAndUpdate(filter, update);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
     };
     UserModel.prototype.registerGoogleCustomer = function (userid, displayName, response) {
         var _this = this;

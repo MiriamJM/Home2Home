@@ -81,9 +81,10 @@ var App = /** @class */ (function () {
             _this.Properties.retrieveAllProperties(res);
         });
         router.get('/app/properties/:propertyId', function (req, res) {
-            var id = req.params.propertyId;
+            //var id = req.params.propertyId;
+            var id = req.params.owner;
             console.log('Query single property with id: ' + id);
-            _this.Properties.retrievePropertyDetails(res, { propertyId: id });
+            _this.Properties.retrievePropertyDetails(res, { owner: id });
         });
         router.post('/app/properties/', function (req, res) {
             console.log(req.body);
@@ -96,7 +97,7 @@ var App = /** @class */ (function () {
             });
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
-            _this.Users.updateUserProperty(req.params.owner, jsonObj.propertyId);
+            _this.Users.updateUserProperty(res, { userId: jsonObj.owner }, { propertyId: jsonObj.propertyId });
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {
             var location = req.params.location;

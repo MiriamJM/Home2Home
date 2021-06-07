@@ -119,7 +119,7 @@ class App {
        });
        res.send(this.idGenerator.toString());
        this.idGenerator++;
-       this.Users.updateUserProperty(req.params.userId, jsonObj.propertyId);
+       this.Users.updateUserProperty(req.params.owner, jsonObj.propertyId);
     });
 
     router.get('/app/searchForHomes/:location-:guests', (req, res) => {

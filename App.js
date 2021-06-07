@@ -96,7 +96,7 @@ var App = /** @class */ (function () {
             });
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
-            _this.Users.updateUserProperty(req.params.userId, jsonObj.propertyId);
+            _this.Users.updateUserProperty(req.params.owner, jsonObj.propertyId);
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {
             var location = req.params.location;

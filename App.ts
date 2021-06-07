@@ -102,7 +102,7 @@ class App {
         this.Properties.retrieveAllProperties(res);
     });
 
-    router.get('/app/properties/:propertyId', (req, res) => {
+    router.get('/app/properties/:owner', (req, res) => {
         //var id = req.params.propertyId;
         var id = req.params.owner;
         console.log('Query single property with id: ' + id);

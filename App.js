@@ -80,7 +80,7 @@ var App = /** @class */ (function () {
             console.log('userid:' + req.user.id);
             _this.Properties.retrieveAllProperties(res);
         });
-        router.get('/app/properties/:propertyId', function (req, res) {
+        router.get('/app/properties/:owner', function (req, res) {
             //var id = req.params.propertyId;
             var id = req.params.owner;
             console.log('Query single property with id: ' + id);

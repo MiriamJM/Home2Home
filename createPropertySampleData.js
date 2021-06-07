@@ -11,7 +11,8 @@ propertiesCollection.insert(
 		bathrooms: 3,
 		sqFeet: 3000,
 		address: "123 abc ave",
-		averageRating: 5
+		averageRating: 5,
+		owner: "1234",
 }
 )
 propertiesCollection.insert(
@@ -23,7 +24,8 @@ propertiesCollection.insert(
 		bathrooms: 5,
 		sqFeet: 2000,
 		address: "321 cbd ave",
-		averageRating: 3
+		averageRating: 3,
+		owner: "116493887325549378604",
 }
 )
 
@@ -37,7 +39,7 @@ reviewsCollection.insert(
 		reviewerId: 111,
 		propertyId: 123,
 		comment: "very nice",
-		ratting: 5,
+		rating: 5,
 	}
 )
 reviewsCollection.insert(
@@ -46,7 +48,7 @@ reviewsCollection.insert(
 		reviewerId: 222,
 		propertyId: 345,
 		comment: "house",
-		ratting: 3,
+		rating: 3,
 	}
 )
 

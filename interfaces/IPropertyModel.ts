@@ -9,6 +9,7 @@ interface IPropertyModel extends Mongoose.Document {
     sqFeet: number;
     address: string;
     averageRating: number;
+    owner: string;
 }
 
 export {IPropertyModel};

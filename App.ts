@@ -110,8 +110,8 @@ class App {
 
     router.post('/app/properties/', (req, res) => {
        console.log(req.body);
-       var jsonObj = req.body;
-       jsonObj.propertyId = this.idGenerator;
+       let jsonObj = req.body;
+       //jsonObj.propertyId = this.idGenerator;
         this.Properties.model.create([jsonObj], (err) => {
            if (err) {
                console.log('object creation failed');
@@ -119,7 +119,7 @@ class App {
        });
        res.send(this.idGenerator.toString());
        this.idGenerator++;
-       this.Users.updateUserProperty(req.params.userId, req.params.propertyId);
+       //this.Users.updateUserProperty(req.params.userId, this.idGenerator++);
     });
 
     router.get('/app/searchForHomes/:location-:guests', (req, res) => {

@@ -27,6 +27,12 @@
   <component name="ChangeListManager">
     <list default="true" id="80a81c0f-aa62-4ef3-b463-3ff7acbd0fc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PropertyModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/PropertyModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PropertyModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PropertyModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createPropertySampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/createPropertySampleData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/IPropertyModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IPropertyModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,21 +236,22 @@
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1622428376812" />
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622930264307" />
     <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1622930336808" />
-    <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623014166885">
-      <screen x="0" y="23" width="1440" height="832" />
+    <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623036301036">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="436" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.829@0.23.1440.829" timestamp="1622428235072" />
     <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.830@0.23.1440.830" timestamp="1621726319321" />
+    <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1623036301036" />
     <state x="436" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.832@0.23.1440.832" timestamp="1623014166885" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.833@0.23.1440.833" timestamp="1621804401594" />
     <state x="436" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1621806636719" />
-    <state x="514" y="198" width="735" height="491" key="find.popup" timestamp="1623020645559">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="560" y="193" width="632" height="491" key="find.popup" timestamp="1623036170847">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="647" y="152" width="735" height="534" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1622422993192" />
     <state x="514" y="198" width="735" height="491" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1623020645559" />
     <state x="560" y="193" width="707" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1622945609892" />
-    <state x="560" y="193" width="632" height="491" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1621731050042" />
+    <state x="560" y="193" width="632" height="491" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1623036170847" />
     <state x="560" y="193" width="632" height="492" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1623014439669" />
     <state x="467" y="249" key="git4idea.branch.GitSmartOperationDialog" timestamp="1621634281363">
       <screen x="0" y="23" width="1440" height="830" />
@@ -258,10 +265,11 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="393" y="199" key="run.anything.popup/0.23.1440.829@0.23.1440.829" timestamp="1622418616439" />
-    <state x="252" y="178" width="670" height="674" key="search.everywhere.popup" timestamp="1623016780949">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="252" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1623043658722">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="252" y="178" width="670" height="674" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1623016780949" />
+    <state x="252" y="178" width="670" height="676" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1623043658722" />
     <state x="252" y="179" width="670" height="676" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1621814582785" />
   </component>
 </project>

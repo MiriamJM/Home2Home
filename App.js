@@ -88,7 +88,7 @@ var App = /** @class */ (function () {
         router.post('/app/properties/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-            jsonObj.propertyId = _this.idGenerator;
+            //jsonObj.propertyId = this.idGenerator;
             _this.Properties.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('object creation failed');
@@ -96,7 +96,7 @@ var App = /** @class */ (function () {
             });
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
-            _this.Users.updateUserProperty(req.params.userId, req.params.propertyId);
+            //this.Users.updateUserProperty(req.params.userId, this.idGenerator++);
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {
             var location = req.params.location;

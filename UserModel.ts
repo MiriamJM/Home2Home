@@ -90,7 +90,7 @@ class UserModel {
                 }
                 this.model.create(user, (err, data) => {
                     console.log('api/user-registration: SUCCESS');
-                    response.redirect('/#/property/');
+                    response.redirect('/#/addTravelerProperty/');
                 });
                 //return false;
             }

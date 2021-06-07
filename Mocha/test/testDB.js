@@ -15,7 +15,7 @@ describe('Test property result', function () {
 	var response;
 		 
     before(function (done) {
-        chai.request("http://localhost:8080")
+		chai.request("https://home2homeswap.azurewebsites.net")
 			.get("/app/properties")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -43,6 +43,10 @@ describe('Test property result', function () {
 				for (var i = 0; i < body.length; i++) {
 					expect(body[i]).to.have.property('propertyId');
 					expect(body[i]).to.have.property('propertyName');
+					expect(body[i]).to.have.property('description');
+					expect(body[i]).to.have.property('bedrooms');
+					expect(body[i]).to.have.property('bathrooms');
+					expect(body[i]).to.have.property('address');
 				}
 				return true;
 			});
@@ -57,7 +61,7 @@ describe('Test property result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("http://localhost:8080")
+		chai.request("https://home2homeswap.azurewebsites.net")
 			.get("/app/properties/123")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -84,6 +88,11 @@ describe('Test property result', function () {
 
 				expect(body).to.have.property('propertyId');
 				expect(body).to.have.property('propertyName');
+				expect(body).to.have.property('description');
+				expect(body).to.have.property('bedrooms');
+				expect(body).to.have.property('bathrooms');
+				expect(body).to.have.property('sqFeet');
+				expect(body).to.have.property('address');
 				return true;
 			});
 	});
@@ -97,7 +106,7 @@ describe('Test Travler result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("http://localhost:8080")
+		chai.request("https://home2homeswap.azurewebsites.net")
 			.get("/app/users")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -125,9 +134,43 @@ describe('Test Travler result', function () {
 				for (var i = 0; i < body.length; i++) {
 					expect(body[i]).to.have.property('userId');
 					expect(body[i]).to.have.property('fName');
+					expect(body[i]).to.have.property('locationPreferences');
+					expect(body[i]).to.have.property('datePreferences');
 				}
 				return true;
 			});
+	});
+
+});
+
+describe('Test Travler result', function () {
+
+	var requestResult;
+	var response;
+
+	before(function (done) {
+		chai.request("https://home2homeswap.azurewebsites.net")
+			.post("/app/users")
+			.send(
+				{
+					"locationPreferences": ["Tuscon"],
+					"datePreferences": [],
+					"userId": 116387948649455570000,
+					"fName": "Jeff",
+				}
+			)
+			.end(function (err, res) {
+				requestResult = res.body;
+				response = res;
+				expect(err).to.be.null;
+				expect(res).to.have.status(200);
+				done();
+			});
+	});
+
+	it('Should return an ok response', function () {
+		expect(response).to.have.status(200);
+		expect(response).to.have.headers;
 	});
 
 });

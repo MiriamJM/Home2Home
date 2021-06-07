@@ -44,11 +44,8 @@ var App = /** @class */ (function () {
         this.expressApp.use(passport.session());
     };
     App.prototype.validateAuth = function (req, res, next) {
-        if (req.isAuthenticated()) {
-            console.log("user is authenticated");
+        if (req.isAuthenticated())
             return next();
-        }
-        console.log("user is not authenticated");
         res.redirect('/');
     };
     App.prototype.validateAuthAPI = function (req, res, next) {
@@ -69,16 +66,10 @@ var App = /** @class */ (function () {
         router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
             var user = JSON.parse(JSON.stringify(req.user));
             _this.Users.registerGoogleCustomer(user.id, user.displayName, res);
-            /*if (this.Users.registerGoogleCustomer(user.id, user.displayName, res)) {
-                res.redirect('/#/travelerProfile/' + user.id);
-            }
-            else {
-            //console.log("successully authenticated user and returned to callback page");
-            //console.log("redirecting to /#/properties");
-            //TODO: if statement to determine redirect
-            //res.redirect('/#/travelerProfile/' + user.id);
-                res.redirect('/#/property/');
-            }*/
+        });
+        router.get('/api/auth-data', this.validateAuthAPI, function (req, res) {
+            var user = JSON.parse(JSON.stringify(req.user));
+            return res.send({ userId: user.id });
         });
         router.get('/getSession', function (req, res) {
             console.log('Get session');

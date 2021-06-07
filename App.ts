@@ -56,8 +56,7 @@ class App {
 
 
   private validateAuth(req, res, next):void {
-    if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
-    console.log("user is not authenticated");
+    if (req.isAuthenticated()) return next();
     res.redirect('/');
   }
 
@@ -85,22 +84,18 @@ class App {
     (req, res) => {
         var user = JSON.parse(JSON.stringify(req.user));
         this.Users.registerGoogleCustomer(user.id, user.displayName, res);
-        /*if (this.Users.registerGoogleCustomer(user.id, user.displayName, res)) {
-            res.redirect('/#/travelerProfile/' + user.id);
-        }
-        else {
-        //console.log("successully authenticated user and returned to callback page");
-        //console.log("redirecting to /#/properties");
-        //TODO: if statement to determine redirect
-        //res.redirect('/#/travelerProfile/' + user.id);
-            res.redirect('/#/property/');
-        }*/
+    });
+
+   router.get('/api/auth-data', this.validateAuthAPI, (req, res) => {
+        var user = JSON.parse(JSON.stringify(req.user));
+        return res.send({ userId: user.id });
     });
 
     router.get('/getSession', (req, res) => {
         console.log('Get session');
         res.send(this.googlePassportObj);
     });
+
 
     router.get('/app/properties/', (req, res) => {
         console.log('Query All properties');

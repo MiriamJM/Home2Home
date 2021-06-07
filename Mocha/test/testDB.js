@@ -47,7 +47,6 @@ describe('Test property result', function () {
 					expect(body[i]).to.have.property('bedrooms');
 					expect(body[i]).to.have.property('bathrooms');
 					expect(body[i]).to.have.property('address');
-					expect(body[i]).to.have.property('owner');
 				}
 				return true;
 			});
@@ -94,7 +93,6 @@ describe('Test property result', function () {
 				expect(body).to.have.property('bathrooms');
 				expect(body).to.have.property('sqFeet');
 				expect(body).to.have.property('address');
-				expect(body).to.have.property('owner');
 				return true;
 			});
 	});
@@ -141,6 +139,38 @@ describe('Test Travler result', function () {
 				}
 				return true;
 			});
+	});
+
+});
+
+describe('Test Travler result', function () {
+
+	var requestResult;
+	var response;
+
+	before(function (done) {
+		chai.request("https://home2homeswap.azurewebsites.net")
+			.post("/app/users")
+			.send(
+				{
+					"locationPreferences": ["Tuscon"],
+					"datePreferences": [],
+					"userId": 116387948649455570000,
+					"fName": "Jeff",
+				}
+			)
+			.end(function (err, res) {
+				requestResult = res.body;
+				response = res;
+				expect(err).to.be.null;
+				expect(res).to.have.status(200);
+				done();
+			});
+	});
+
+	it('Should return an ok response', function () {
+		expect(response).to.have.status(200);
+		expect(response).to.have.headers;
 	});
 
 });

@@ -50,7 +50,7 @@ var App = /** @class */ (function () {
         res.redirect('/');
     };
     App.prototype.validateAuthAPI = function (req, res, next) {
-        if (req.isAuthenticated())
+        if (req.user)
             return next();
         res.send({});
     };
@@ -98,8 +98,8 @@ var App = /** @class */ (function () {
                     console.log('object creation failed');
                 }
             });
-            res.send(_this.idGenerator.toString());
-            _this.idGenerator++;
+            res.send(id);
+            //this.idGenerator++;
             _this.Users.updateUserProperty(res, { userId: jsonObj.owner }, { propertyId: jsonObj.propertyId });
         });
         router.get('/app/searchForHomes/:location-:guests', function (req, res) {

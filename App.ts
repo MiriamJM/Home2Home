@@ -64,7 +64,7 @@ class App {
   }
 
     private validateAuthAPI(req, res, next):void {
-        if (req.isAuthenticated()) return next();
+        if (req.user) return next();
         res.send({});
     }
 
@@ -123,8 +123,8 @@ class App {
                console.log('object creation failed');
            }
        });
-       res.send(this.idGenerator.toString());
-       this.idGenerator++;
+       res.send(id);
+       //this.idGenerator++;
        this.Users.updateUserProperty(res, {userId:jsonObj.owner}, {propertyId:jsonObj.propertyId});
     });
 

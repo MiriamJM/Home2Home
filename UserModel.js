@@ -79,7 +79,8 @@ var UserModel = /** @class */ (function () {
                 };
                 _this.model.create(user, function (err, data) {
                     console.log('api/user-registration: SUCCESS');
-                    response.redirect('/#/addTravelerProperty/');
+                    //response.redirect('/#/addTravelerProperty/');
+                    response.redirect('/#/travelerProfile/');
                 });
                 //return false;
             }

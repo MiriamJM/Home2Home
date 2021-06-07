@@ -75,7 +75,7 @@ class UserModel {
         this.model.findOne({userId: userid }).exec((err, data) => {
             if (data) {
             	console.log(`api/user-registration: FAIL - ID already exists`);
-            	response.redirect('/#/travelerProfile/' + userid);
+            	response.redirect('/#/travelerProfile/');
             	//return true;
             } else {
                 var user = {

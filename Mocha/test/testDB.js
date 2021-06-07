@@ -15,7 +15,7 @@ describe('Test property result', function () {
 	var response;
 		 
     before(function (done) {
-		chai.request("https://home2homeswap.azurewebsites.net")
+		chai.request("https://home2hometravel.azurewebsites.net")
 			.get("/app/properties")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -32,8 +32,8 @@ describe('Test property result', function () {
 		expect(response).to.have.headers;
     });
     
-	it('The first entry in the array has known properties', function(){
-		expect(requestResult[0]).to.include.keys('propertyId');
+	it('The first entry in the array has known properties', function () {
+		expect(requestResult[0]).to.have.property('owner');
 	    expect(requestResult[0]).to.have.property('_id');
 		expect(response.body).to.not.be.a.string;
 	});
@@ -41,7 +41,8 @@ describe('Test property result', function () {
 		expect(response.body).to.satisfy(
 			function (body) {
 				for (var i = 0; i < body.length; i++) {
-					expect(body[i]).to.have.property('propertyId');
+					expect(body[i]).to.have.property('_id');
+					expect(body[i]).to.have.property('owner');
 					expect(body[i]).to.have.property('propertyName');
 					expect(body[i]).to.have.property('description');
 					expect(body[i]).to.have.property('bedrooms');
@@ -61,8 +62,8 @@ describe('Test property result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("https://home2homeswap.azurewebsites.net")
-			.get("/app/properties/123")
+		chai.request("https://home2hometravel.azurewebsites.net")
+			.get("/app/properties/116493887325549378604")
 			.end(function (err, res) {
 				requestResult = res.body;
 				response = res;
@@ -78,15 +79,17 @@ describe('Test property result', function () {
 	});
 
 	it('The entry has known properties', function () {
-		expect(requestResult).to.include.keys('propertyId');
 		expect(requestResult).to.have.property('_id');
+		expect(requestResult).to.have.property('owner');
+		expect(requestResult).to.have.property('propertyName');
+		expect(requestResult).to.have.property('bedrooms');
+		expect(requestResult).to.have.property('sqFeet');
 		expect(response.body).to.not.be.a.string;
 	});
 	it('The elements in the array have the expected properties', function () {
 		expect(response.body).to.satisfy(
 			function (body) {
-
-				expect(body).to.have.property('propertyId');
+				expect(body).to.have.property('owner');
 				expect(body).to.have.property('propertyName');
 				expect(body).to.have.property('description');
 				expect(body).to.have.property('bedrooms');
@@ -106,7 +109,7 @@ describe('Test Travler result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("https://home2homeswap.azurewebsites.net")
+		chai.request("https://home2hometravel.azurewebsites.net")
 			.get("/app/users")
 			.end(function (err, res) {
 				requestResult = res.body;
@@ -149,7 +152,7 @@ describe('Test Travler result', function () {
 	var response;
 
 	before(function (done) {
-		chai.request("https://home2homeswap.azurewebsites.net")
+		chai.request("https://home2hometravel.azurewebsites.net")
 			.post("/app/users")
 			.send(
 				{
